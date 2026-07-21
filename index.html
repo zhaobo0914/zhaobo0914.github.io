@@ -10,8 +10,11 @@
   <title>赵铂 - 个人简历 | 机械设计工程师 | RoboMaster 国家级冠军</title>
   <script>
     (function() {
-      if (!window.location.search.includes('v=')) {
-        window.location.replace(window.location.href + (window.location.search ? '&' : '?') + 'v=9');
+      var CURRENT_VER = '10';
+      var params = new URLSearchParams(window.location.search);
+      if (params.get('v') !== CURRENT_VER) {
+        params.set('v', CURRENT_VER);
+        window.location.replace(window.location.href.split('?')[0] + '?' + params.toString());
       }
     })();
   </script>
@@ -1152,5 +1155,15 @@
     });
   </script>
 
+  <script>
+    (function() {
+      var ts = Date.now();
+      document.querySelectorAll('img, video source').forEach(function(el) {
+        if (el.src && el.src.indexOf(window.location.hostname) !== -1) {
+          el.src = el.src.replace(/[?&]t=\d+/, '') + (el.src.indexOf('?') === -1 ? '?' : '&') + 't=' + ts;
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
