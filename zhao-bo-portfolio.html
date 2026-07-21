@@ -300,6 +300,92 @@
       text-align: center;
     }
 
+    /* ===== Certificate Gallery ===== */
+    .cert-year {
+      margin-bottom: 1.2rem;
+    }
+    .cert-year:last-child { margin-bottom: 0; }
+    .cert-year-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #4f46e5;
+      margin-bottom: 0.7rem;
+      padding-left: 0.6rem;
+      border-left: 3px solid #4f46e5;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .cert-year-title .year-tag {
+      font-size: 0.7rem;
+      padding: 0.15rem 0.5rem;
+      background: linear-gradient(135deg, #4f46e5, #7c3aed);
+      color: #fff;
+      border-radius: 10px;
+      font-weight: 600;
+    }
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.8rem;
+    }
+    .cert-item {
+      background: rgba(255, 255, 255, 0.65);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(99, 102, 241, 0.12);
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .cert-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(79, 70, 229, 0.15);
+    }
+    .cert-item .cert-img-wrap {
+      width: 100%;
+      height: 180px;
+      background: #f8fafc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .cert-item .cert-img-wrap img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    .cert-item .cert-info {
+      padding: 0.55rem 0.6rem 0.7rem;
+      text-align: center;
+    }
+    .cert-item .cert-award {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #1e1b4b;
+      margin-bottom: 0.15rem;
+    }
+    .cert-item .cert-award.gold {
+      color: #92400e;
+    }
+    .cert-item .cert-name {
+      font-size: 0.72rem;
+      color: #6b7280;
+      line-height: 1.3;
+    }
+    .cert-item .cert-badge {
+      display: inline-block;
+      margin-top: 0.3rem;
+      padding: 0.1rem 0.4rem;
+      background: linear-gradient(135deg, rgba(251, 191, 36, 0.18), rgba(217, 119, 6, 0.10));
+      border: 1px solid rgba(217, 119, 6, 0.25);
+      border-radius: 6px;
+      font-size: 0.68rem;
+      color: #92400e;
+      font-weight: 600;
+    }
+
     /* ===== Lightbox ===== */
     .lightbox {
       display: none;
@@ -456,6 +542,8 @@
       .section-title { font-size: 1.05rem; }
       .highlight-grid { grid-template-columns: repeat(2, 1fr); }
       .photo-gallery { grid-template-columns: repeat(3, 1fr); }
+      .cert-grid { grid-template-columns: repeat(2, 1fr); }
+      .cert-item .cert-img-wrap { height: 150px; }
       .exp-header { flex-direction: column; }
     }
     @media (max-width: 480px) {
@@ -593,6 +681,132 @@
           <span class="exp-award">2025 3V3 对抗赛 &middot; 国家级二等奖</span>
           <span class="exp-award">2025 3V3 步兵机器人组竞技奖 &middot; 二等奖</span>
           <span class="exp-award gold">2026 3V3 对抗赛 &middot; 国家级季军</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Awards Wall ===== -->
+    <div class="glass-card">
+      <div class="section-title">
+        <span class="icon">&#127942;</span> 竞赛荣誉墙
+      </div>
+
+      <!-- 2026 -->
+      <div class="cert-year">
+        <div class="cert-year-title">
+          <span class="year-tag">2026</span> RoboMaster 机甲大师高校联盟赛 · 四川站
+        </div>
+        <div class="cert-grid">
+          <div class="cert-item" onclick="openLightbox('assets/result_2026_sc_1v1_champion.png')">
+            <div class="cert-img-wrap">
+              <img src="assets/result_2026_sc_1v1_champion.png" alt="2026四川站步兵对抗冠军" loading="lazy">
+            </div>
+            <div class="cert-info">
+              <div class="cert-award gold">冠军</div>
+              <div class="cert-name">步兵对抗赛 · 官方公示</div>
+              <div class="cert-badge">IRONR战队</div>
+            </div>
+          </div>
+          <div class="cert-item" onclick="openLightbox('assets/cert_2026_sc_champion_3rd.jpg')">
+            <div class="cert-img-wrap">
+              <img src="assets/cert_2026_sc_champion_3rd.jpg" alt="2026四川站冠军+季军奖状" loading="lazy">
+            </div>
+            <div class="cert-info">
+              <div class="cert-award gold">冠军 / 季军</div>
+              <div class="cert-name">步兵对抗 + 3V3 · 获奖证书</div>
+            </div>
+          </div>
+          <div class="cert-item" onclick="openLightbox('assets/result_2026_sc_3v3_3rd.jpg')">
+            <div class="cert-img-wrap">
+              <img src="assets/result_2026_sc_3v3_3rd.jpg" alt="2026四川站3V3季军" loading="lazy">
+            </div>
+            <div class="cert-info">
+              <div class="cert-award">季军</div>
+              <div class="cert-name">3V3对抗赛 · 官方公示</div>
+              <div class="cert-badge">IRONR战队</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2025 -->
+      <div class="cert-year">
+        <div class="cert-year-title">
+          <span class="year-tag">2025</span> RoboMaster 机甲大师高校联盟赛
+        </div>
+        <div class="cert-grid">
+          <div class="cert-item" onclick="openLightbox('assets/cert_2025_1v1_1st.png')">
+            <div class="cert-img-wrap">
+              <img src="assets/cert_2025_1v1_1st.png" alt="2025步兵对抗一等奖" loading="lazy">
+            </div>
+            <div class="cert-info">
+              <div class="cert-award gold">一等奖</div>
+              <div class="cert-name">步兵对抗赛 · 机器人竞技奖</div>
+            </div>
+          </div>
+          <div class="cert-item" onclick="openLightbox('assets/cert_2025_3v3_2nd.jpg')">
+            <div class="cert-img-wrap">
+              <img src="assets/cert_2025_3v3_2nd.jpg" alt="2025 3V3二等奖" loading="lazy">
+            </div>
+            <div class="cert-info">
+              <div class="cert-award">二等奖</div>
+              <div class="cert-name">3V3对抗赛 · 步兵机器人组</div>
+            </div>
+          </div>
+          <div class="cert-item" onclick="openLightbox('assets/cert_2025_fj_3v3_2nd.jpg')">
+            <div class="cert-img-wrap">
+              <img src="assets/cert_2025_fj_3v3_2nd.jpg" alt="2025福建站3V3二等奖" loading="lazy">
+            </div>
+            <div class="cert-info">
+              <div class="cert-award">二等奖</div>
+              <div class="cert-name">3V3对抗赛 · 福建站</div>
+            </div>
+          </div>
+          <div class="cert-item" onclick="openLightbox('assets/cert_2025_fj_1v1_3rd.jpg')">
+            <div class="cert-img-wrap">
+              <img src="assets/cert_2025_fj_1v1_3rd.jpg" alt="2025福建站步兵对抗三等奖" loading="lazy">
+            </div>
+            <div class="cert-info">
+              <div class="cert-award">三等奖</div>
+              <div class="cert-name">步兵对抗赛 · 福建站</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2024 -->
+      <div class="cert-year">
+        <div class="cert-year-title">
+          <span class="year-tag">2024</span> RoboMaster 机甲大师高校联盟赛 · 广东站
+        </div>
+        <div class="cert-grid">
+          <div class="cert-item" onclick="openLightbox('assets/cert_2024_gd_3v3_1st.jpg')">
+            <div class="cert-img-wrap">
+              <img src="assets/cert_2024_gd_3v3_1st.jpg" alt="2024广东站3V3一等奖" loading="lazy">
+            </div>
+            <div class="cert-info">
+              <div class="cert-award gold">一等奖</div>
+              <div class="cert-name">3V3对抗赛 · 非甲级队伍</div>
+            </div>
+          </div>
+          <div class="cert-item" onclick="openLightbox('assets/cert_2024_gd_1v1_3rd.jpg')">
+            <div class="cert-img-wrap">
+              <img src="assets/cert_2024_gd_1v1_3rd.jpg" alt="2024广东站步兵对抗三等奖" loading="lazy">
+            </div>
+            <div class="cert-info">
+              <div class="cert-award">三等奖</div>
+              <div class="cert-name">步兵对抗赛 · 非甲级队伍</div>
+            </div>
+          </div>
+          <div class="cert-item" onclick="openLightbox('assets/cert_2024_gd_1v1_3rd_individual.jpg')">
+            <div class="cert-img-wrap">
+              <img src="assets/cert_2024_gd_1v1_3rd_individual.jpg" alt="2024广东站步兵对抗三等奖-个人" loading="lazy">
+            </div>
+            <div class="cert-info">
+              <div class="cert-award">三等奖</div>
+              <div class="cert-name">步兵对抗赛 · 赵铂个人证书</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
