@@ -386,6 +386,54 @@
       font-weight: 600;
     }
 
+    /* ===== Design Works Gallery ===== */
+    .design-group {
+      margin-bottom: 1.4rem;
+    }
+    .design-group:last-child { margin-bottom: 0; }
+    .design-group-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1e1b4b;
+      margin-bottom: 0.3rem;
+    }
+    .design-group-desc {
+      font-size: 0.82rem;
+      color: #6b7280;
+      margin-bottom: 0.7rem;
+      line-height: 1.5;
+    }
+    .design-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.7rem;
+    }
+    .design-item {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(99, 102, 241, 0.12);
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      background: #f8fafc;
+    }
+    .design-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(79, 70, 229, 0.15);
+    }
+    .design-item img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      display: block;
+    }
+    .design-item .design-label {
+      padding: 0.4rem 0.5rem 0.5rem;
+      text-align: center;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #1e1b4b;
+    }
+
     /* ===== Lightbox ===== */
     .lightbox {
       display: none;
@@ -544,6 +592,7 @@
       .photo-gallery { grid-template-columns: repeat(3, 1fr); }
       .cert-grid { grid-template-columns: repeat(2, 1fr); }
       .cert-item .cert-img-wrap { height: 150px; }
+      .design-grid { grid-template-columns: repeat(2, 1fr); }
       .exp-header { flex-direction: column; }
     }
     @media (max-width: 480px) {
@@ -681,6 +730,51 @@
           <span class="exp-award">2025 3V3 对抗赛 &middot; 国家级二等奖</span>
           <span class="exp-award">2025 3V3 步兵机器人组竞技奖 &middot; 二等奖</span>
           <span class="exp-award gold">2026 3V3 对抗赛 &middot; 国家级季军</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Design Works ===== -->
+    <div class="glass-card">
+      <div class="section-title">
+        <span class="icon">&#128208;</span> 机械设计作品
+      </div>
+
+      <div class="design-group">
+        <div class="design-group-title">2023 赛季 &middot; 云台设计</div>
+        <div class="design-group-desc">RoboMaster 竞赛初期云台机构设计，采用两轴旋转结构，具备俯仰和方位自由度。独立完成方案设计到 SolidWorks 建模全流程。</div>
+        <div class="design-grid">
+          <div class="design-item" onclick="openLightbox('assets/sw_2023_gimbal.png')">
+            <img src="assets/sw_2023_gimbal.png" alt="2023云台设计" loading="lazy">
+            <div class="design-label">两轴云台装配体</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="design-group">
+        <div class="design-group-title">2024 赛季 &middot; 麦克纳姆轮底盘 + 云台 + 发射机构</div>
+        <div class="design-group-desc">独立设计步兵机器人全机结构：四轮麦克纳姆轮全向底盘、中央回转支承、双轴云台、摩擦轮发射机构及弹仓系统。采用分层模块化架构，故障率降低 20%。</div>
+        <div class="design-grid">
+          <div class="design-item" onclick="openLightbox('assets/sw_2024_assembly_1.png')">
+            <img src="assets/sw_2024_assembly_1.png" alt="2024全机总装视角一" loading="lazy">
+            <div class="design-label">全机总装 &middot; 视角一</div>
+          </div>
+          <div class="design-item" onclick="openLightbox('assets/sw_2024_assembly_2.png')">
+            <img src="assets/sw_2024_assembly_2.png" alt="2024全机总装视角二" loading="lazy">
+            <div class="design-label">全机总装 &middot; 视角二</div>
+          </div>
+          <div class="design-item" onclick="openLightbox('assets/sw_2024_chassis.png')">
+            <img src="assets/sw_2024_chassis.png" alt="2024底盘设计" loading="lazy">
+            <div class="design-label">麦克纳姆轮底盘</div>
+          </div>
+          <div class="design-item" onclick="openLightbox('assets/sw_2024_gimbal_chassis.jpg')">
+            <img src="assets/sw_2024_gimbal_chassis.jpg" alt="2024云台底盘" loading="lazy">
+            <div class="design-label">云台与底盘机构</div>
+          </div>
+          <div class="design-item" onclick="openLightbox('assets/sw_2024_assembly_3.png')">
+            <img src="assets/sw_2024_assembly_3.png" alt="2024完整总装" loading="lazy">
+            <div class="design-label">完整总装 &middot; 含发射机构</div>
+          </div>
         </div>
       </div>
     </div>
