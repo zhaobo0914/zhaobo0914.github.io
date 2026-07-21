@@ -90,6 +90,15 @@
     }
     .header .contact-row a:hover { color: #7c3aed; }
     .header .contact-row span { display: inline-flex; align-items: center; gap: 0.3rem; }
+    .header .tagline {
+      font-size: 0.95rem;
+      color: #64748b;
+      margin-bottom: 0.8rem;
+      line-height: 1.6;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
     .header .school-badge {
       display: inline-block;
       margin-top: 0.7rem;
@@ -99,6 +108,66 @@
       border-radius: 16px;
       font-size: 0.85rem;
       font-weight: 500;
+    }
+
+    /* ===== Timeline ===== */
+    .timeline-grid {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+      margin-top: 0.6rem;
+    }
+    .timeline-item {
+      flex: 1;
+      text-align: center;
+      padding: 1.3rem 0.8rem;
+      background: rgba(255,255,255,0.55);
+      border-radius: 14px;
+      border: 1px solid rgba(99,102,241,0.12);
+      transition: transform 0.2s;
+    }
+    .timeline-item:hover {
+      transform: translateY(-2px);
+    }
+    .timeline-item.highlight {
+      background: linear-gradient(135deg, rgba(251,191,36,0.18), rgba(217,119,6,0.08));
+      border-color: rgba(217,119,6,0.35);
+      box-shadow: 0 4px 16px rgba(251,191,36,0.15);
+    }
+    .tl-year {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #4f46e5;
+      margin-bottom: 0.15rem;
+    }
+    .timeline-item.highlight .tl-year {
+      color: #92400e;
+    }
+    .tl-station {
+      font-size: 0.82rem;
+      color: #6b7280;
+      margin-bottom: 0.5rem;
+    }
+    .tl-award {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #1e1b4b;
+      line-height: 1.5;
+      margin-bottom: 0.4rem;
+    }
+    .tl-desc {
+      font-size: 0.75rem;
+      color: #64748b;
+      line-height: 1.4;
+    }
+    .tl-arrow {
+      display: flex;
+      align-items: center;
+      font-size: 1.4rem;
+      color: #a78bfa;
+      padding: 0 0.5rem;
+      flex-shrink: 0;
+      font-weight: 700;
     }
 
     /* ===== Section Title ===== */
@@ -748,6 +817,8 @@
       .team-grid { grid-template-columns: 1fr; }
       .team-grid.three-col { grid-template-columns: 1fr; }
       .video-grid { grid-template-columns: 1fr; }
+      .timeline-grid { flex-direction: column; }
+      .tl-arrow { transform: rotate(90deg); padding: 0.2rem 0; }
       .exp-header { flex-direction: column; }
     }
     @media (max-width: 480px) {
@@ -771,19 +842,20 @@
     <!-- ===== A. Header ===== -->
     <div class="glass-card header">
       <h1>赵铂</h1>
-      <div class="subtitle">机械设计工程师 | RoboMaster 国家级冠军 | 3年机器人研发经验</div>
+      <div class="subtitle">RoboMaster 机甲大师 · 国家级冠军</div>
+      <div class="tagline">3年3赛季，从三等奖到全国冠军 — 独立完成竞技机器人全流程设计与制造</div>
       <div class="contact-row">
         <span>&#9742; 15070680950</span>
         <span>&#9993; <a href="mailto:3396481237@qq.com">3396481237@qq.com</a></span>
         <span>&#9873; 深圳市</span>
       </div>
-      <div class="school-badge">广州铁路职业技术学院 &middot; 新能源汽车技术专业 &middot; 2023-2026</div>
+      <div class="school-badge">广州铁路职业技术学院 &middot; 新能源汽车技术 &middot; 2023-2026</div>
     </div>
 
     <!-- ===== B. Core Highlights ===== -->
     <div class="glass-card">
       <div class="section-title">
-        <span class="icon">&#9733;</span> 核心亮点
+        <span class="icon">&#9733;</span> 核心战绩
       </div>
       <div class="highlight-grid">
         <div class="highlight-card gold-highlight">
@@ -792,19 +864,49 @@
           <div class="hl-label">步兵对抗（1V1）</div>
         </div>
         <div class="highlight-card">
-          <div class="hl-icon">&#128340;</div>
-          <div class="hl-value">3赛季<br>持续参赛</div>
-          <div class="hl-label">从三等奖到冠军</div>
-        </div>
-        <div class="highlight-card">
           <div class="hl-icon">&#128200;</div>
-          <div class="hl-value">故障率<br>降低 20%</div>
-          <div class="hl-label">结构迭代优化成果</div>
+          <div class="hl-value">3年3赛季<br>持续进化</div>
+          <div class="hl-label">三等奖 → 一等奖 → 冠军</div>
         </div>
         <div class="highlight-card">
           <div class="hl-icon">&#129302;</div>
-          <div class="hl-value">独立设计<br>多台机器人</div>
-          <div class="hl-label">方案&rarr;建模&rarr;装配&rarr;参赛</div>
+          <div class="hl-value">独立完成<br>3台机器人</div>
+          <div class="hl-label">方案设计 → 建模 → 装配 → 迭代</div>
+        </div>
+        <div class="highlight-card">
+          <div class="hl-icon">&#128736;</div>
+          <div class="hl-value">故障率<br>降低 20%</div>
+          <div class="hl-label">结构优化 + 装配工艺改进</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Growth Timeline ===== -->
+    <div class="glass-card">
+      <div class="section-title">
+        <span class="icon">&#128640;</span> 成长轨迹
+      </div>
+      <div class="section-subtitle">3年3赛季，从新人到冠军的完整进化路径</div>
+      <div class="timeline-grid">
+        <div class="timeline-item">
+          <div class="tl-year">2024</div>
+          <div class="tl-station">广东站</div>
+          <div class="tl-award">3V3 一等奖<br>1V1 三等奖</div>
+          <div class="tl-desc">首次参赛，独立完成步兵机器人设计</div>
+        </div>
+        <div class="tl-arrow">&rarr;</div>
+        <div class="timeline-item">
+          <div class="tl-year">2025</div>
+          <div class="tl-station">福建站</div>
+          <div class="tl-award">1V1 一等奖<br>3V3 二等奖</div>
+          <div class="tl-desc">结构迭代优化，故障率大幅降低</div>
+        </div>
+        <div class="tl-arrow">&rarr;</div>
+        <div class="timeline-item highlight">
+          <div class="tl-year">2026</div>
+          <div class="tl-station">四川站</div>
+          <div class="tl-award">&#127942; 1V1 冠军<br>3V3 季军</div>
+          <div class="tl-desc">巅峰赛季，技术全面成熟</div>
         </div>
       </div>
     </div>
@@ -814,7 +916,7 @@
       <div class="section-title">
         <span class="icon">&#128208;</span> 机械设计作品
       </div>
-      <div class="section-subtitle">简历中提到的 SolidWorks 参数化建模、云台/底盘设计 &mdash; 以下是实际设计图纸</div>
+      <div class="section-subtitle">SolidWorks 参数化建模 | 模块化架构 | 零部件装配 — 以下是实际设计图纸</div>
 
       <div class="design-group">
         <div class="design-group-title">2023 赛季 &middot; 云台设计</div>
@@ -856,7 +958,7 @@
 
       <div class="design-group">
         <div class="design-group-title">平衡轮腿车 &middot; 广州磐灵科技实习项目</div>
-        <div class="design-group-desc">简历中"将设计迭代周期缩短30%" &mdash; 以下为最终实物。</div>
+        <div class="design-group-desc">平衡轮腿车实习项目 — 以下为最终实物</div>
         <div class="design-grid" style="max-width:320px;">
           <div class="design-item" onclick="openLightbox('assets/wheelleg_real.jpg')">
             <img src="assets/wheelleg_real.jpg" alt="平衡轮腿车实物" loading="lazy">
@@ -871,7 +973,7 @@
       <div class="section-title">
         <span class="icon">&#128196;</span> 技术能力证明
       </div>
-      <div class="section-subtitle">简历中"持低压电工证" &mdash; 以下是证书原件</div>
+      <div class="section-subtitle">国家特种作业操作证 — 证书原件</div>
       <div class="credential-grid">
         <div class="credential-item" onclick="openLightbox('assets/cert_electrician.jpg')">
           <img src="assets/cert_electrician.jpg" alt="低压电工证" loading="lazy">
@@ -888,7 +990,7 @@
       <div class="section-title">
         <span class="icon">&#127909;</span> 比赛视频
       </div>
-      <div class="section-subtitle">简历无法呈现的动态展示 &mdash; 机器人实机运行与比赛现场</div>
+      <div class="section-subtitle">机器人实机运行与比赛现场 — 动态展示工程成果</div>
       <div class="video-grid">
         <div class="video-card">
           <video controls preload="metadata" poster="assets/robot_real_2024_front.jpg">
@@ -934,7 +1036,7 @@
       <div class="section-title">
         <span class="icon">&#128247;</span> 竞赛实战记录
       </div>
-      <div class="section-subtitle">团队合影与机器人实物 &mdash; 简历中"率队参加"的具体体现</div>
+      <div class="section-subtitle">3年3赛季实战记录 — 从三等奖到冠军的蜕变</div>
 
       <div class="team-year">
         <div class="team-year-title">2026 赛季 &middot; 四川站 &mdash; 冠军 + 季军</div>
@@ -1132,7 +1234,7 @@
 
     <!-- ===== Footer ===== -->
     <div class="footer">
-      <div class="footer-note">赵铂 &middot; 机械设计工程师 &middot; RoboMaster 国家级冠军</div>
+      <div class="footer-note">赵铂 &middot; RoboMaster 国家级冠军 &middot; 机械设计工程师</div>
     </div>
 
   </div>
