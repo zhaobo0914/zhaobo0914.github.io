@@ -528,6 +528,44 @@
       color: #1e1b4b;
     }
 
+    /* ===== Video Gallery ===== */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    .video-card {
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(99, 102, 241, 0.12);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .video-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(79, 70, 229, 0.15);
+    }
+    .video-card video {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
+      background: #0f0f0f;
+    }
+    .video-card .vid-info {
+      padding: 0.55rem 0.7rem 0.7rem;
+    }
+    .video-card .vid-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #1e1b4b;
+      margin-bottom: 0.15rem;
+    }
+    .video-card .vid-desc {
+      font-size: 0.75rem;
+      color: #6b7280;
+    }
+
     /* ===== Lightbox ===== */
     .lightbox {
       display: none;
@@ -690,6 +728,7 @@
       .credential-grid { grid-template-columns: 1fr; }
       .team-grid { grid-template-columns: 1fr; }
       .team-grid.three-col { grid-template-columns: 1fr; }
+      .video-grid { grid-template-columns: 1fr; }
       .exp-header { flex-direction: column; }
     }
     @media (max-width: 480px) {
@@ -986,6 +1025,51 @@
           <div class="team-item" onclick="openLightbox('assets/robot_real_2023_3.jpg')">
             <img src="assets/robot_real_2023_3.jpg" alt="2023 3号机器人" loading="lazy">
             <div class="team-label">3号机器人 &middot; 赛场</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Video Section ===== -->
+    <div class="glass-card">
+      <div class="section-title">
+        <span class="icon">&#127909;</span> 比赛视频
+      </div>
+      <div class="video-grid">
+        <div class="video-card">
+          <video controls preload="metadata" poster="assets/robot_real_2024_front.jpg">
+            <source src="assets/video_2025_edit.mp4" type="video/mp4">
+          </video>
+          <div class="vid-info">
+            <div class="vid-title">2025 赛季 &middot; 机器人运行实录</div>
+            <div class="vid-desc"> edited &middot; 2.5MB</div>
+          </div>
+        </div>
+        <div class="video-card">
+          <video controls preload="metadata" poster="assets/robot_real_2024_multi.jpg">
+            <source src="assets/video_2024_match.mp4" type="video/mp4">
+          </video>
+          <div class="vid-info">
+            <div class="vid-title">2024 赛季 &middot; 比赛现场录像</div>
+            <div class="vid-desc">2024.09.26 &middot; 26.5MB</div>
+          </div>
+        </div>
+        <div class="video-card">
+          <video controls preload="metadata" poster="assets/robot_real_2023_3.jpg">
+            <source src="assets/video_2024_robot.mp4" type="video/mp4">
+          </video>
+          <div class="vid-info">
+            <div class="vid-title">2024 赛季 &middot; 机器人实机运行</div>
+            <div class="vid-desc">34.5MB</div>
+          </div>
+        </div>
+        <div class="video-card">
+          <video controls preload="metadata" poster="assets/robot_real_2023_4.jpg">
+            <source src="assets/video_2024_test.mp4" type="video/mp4">
+          </video>
+          <div class="vid-info">
+            <div class="vid-title">2024 赛季 &middot; 调试测试片段</div>
+            <div class="vid-desc">0.6MB</div>
           </div>
         </div>
       </div>
