@@ -434,6 +434,100 @@
       color: #1e1b4b;
     }
 
+    /* ===== Credential Card ===== */
+    .credential-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    .credential-item {
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(99, 102, 241, 0.12);
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .credential-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(79, 70, 229, 0.15);
+    }
+    .credential-item img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+    .credential-item .cred-info {
+      padding: 0.6rem 0.7rem 0.7rem;
+      text-align: center;
+    }
+    .credential-item .cred-name {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #1e1b4b;
+      margin-bottom: 0.15rem;
+    }
+    .credential-item .cred-detail {
+      font-size: 0.75rem;
+      color: #6b7280;
+    }
+    .credential-item .cred-detail span {
+      color: #4f46e5;
+      font-weight: 600;
+    }
+
+    /* ===== Team Photos ===== */
+    .team-year {
+      margin-bottom: 1.4rem;
+    }
+    .team-year:last-child { margin-bottom: 0; }
+    .team-year-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1e1b4b;
+      margin-bottom: 0.3rem;
+    }
+    .team-year-desc {
+      font-size: 0.82rem;
+      color: #6b7280;
+      margin-bottom: 0.7rem;
+      line-height: 1.5;
+    }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.8rem;
+    }
+    .team-grid.three-col {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .team-item {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(99, 102, 241, 0.12);
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      background: #f8fafc;
+    }
+    .team-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(79, 70, 229, 0.15);
+    }
+    .team-item img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      display: block;
+    }
+    .team-item .team-label {
+      padding: 0.4rem 0.5rem 0.5rem;
+      text-align: center;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #1e1b4b;
+    }
+
     /* ===== Lightbox ===== */
     .lightbox {
       display: none;
@@ -593,6 +687,9 @@
       .cert-grid { grid-template-columns: repeat(2, 1fr); }
       .cert-item .cert-img-wrap { height: 150px; }
       .design-grid { grid-template-columns: repeat(2, 1fr); }
+      .credential-grid { grid-template-columns: 1fr; }
+      .team-grid { grid-template-columns: 1fr; }
+      .team-grid.three-col { grid-template-columns: 1fr; }
       .exp-header { flex-direction: column; }
     }
     @media (max-width: 480px) {
@@ -774,6 +871,66 @@
           <div class="design-item" onclick="openLightbox('assets/sw_2024_assembly_3.png')">
             <img src="assets/sw_2024_assembly_3.png" alt="2024完整总装" loading="lazy">
             <div class="design-label">完整总装 &middot; 含发射机构</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Credentials ===== -->
+    <div class="glass-card">
+      <div class="section-title">
+        <span class="icon">&#128196;</span> 技术能力证明
+      </div>
+      <div class="credential-grid">
+        <div class="credential-item" onclick="openLightbox('assets/cert_electrician.jpg')">
+          <img src="assets/cert_electrician.jpg" alt="低压电工证" loading="lazy">
+          <div class="cred-info">
+            <div class="cred-name">低压电工作业特种作业操作证</div>
+            <div class="cred-detail">签发机关：<span>广州市应急管理局</span> &middot; 有效期至 2031.07.10</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Team Photos ===== -->
+    <div class="glass-card">
+      <div class="section-title">
+        <span class="icon">&#128247;</span> 竞赛实战记录
+      </div>
+
+      <div class="team-year">
+        <div class="team-year-title">2026 赛季 &middot; 四川站 &mdash; 冠军 + 季军</div>
+        <div class="team-year-desc">IRONR战队在成都大学斩获步兵对抗赛冠军、3V3对抗赛季军，颁奖仪式合影留念。</div>
+        <div class="team-grid">
+          <div class="team-item" onclick="openLightbox('assets/team_2026_sc_award.jpg')">
+            <img src="assets/team_2026_sc_award.jpg" alt="2026四川站颁奖仪式" loading="lazy">
+            <div class="team-label">冠军 + 季军颁奖仪式</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-year">
+        <div class="team-year-title">2025 赛季 &middot; 福建站</div>
+        <div class="team-year-desc">IRONR战队出征福建理工大学，团队23人携4台机器人参赛。</div>
+        <div class="team-grid three-col">
+          <div class="team-item" onclick="openLightbox('assets/team_2025_fj_personal.jpg')">
+            <img src="assets/team_2025_fj_personal.jpg" alt="2025福建站个人与机器人" loading="lazy">
+            <div class="team-label">个人与参赛机器人</div>
+          </div>
+          <div class="team-item" onclick="openLightbox('assets/team_2025_fj_group.jpg')">
+            <img src="assets/team_2025_fj_group.jpg" alt="2025福建站团队合影" loading="lazy">
+            <div class="team-label">IRONR战队大合影</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-year">
+        <div class="team-year-title">2024 赛季 &middot; 广东站</div>
+        <div class="team-year-desc">IRONR战队首次以完整阵容出战广东站，团队18人携2台机器人参赛，获3V3一等奖。</div>
+        <div class="team-grid">
+          <div class="team-item" onclick="openLightbox('assets/team_2024_gd_group.jpg')">
+            <img src="assets/team_2024_gd_group.jpg" alt="2024广东站团队合影" loading="lazy">
+            <div class="team-label">IRONR战队团队合影</div>
           </div>
         </div>
       </div>
