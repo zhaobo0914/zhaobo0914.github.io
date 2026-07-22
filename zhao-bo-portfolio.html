@@ -1038,8 +1038,8 @@
         <div class="design-group-title">2023 赛季 &middot; 云台设计</div>
         <div class="design-group-desc">竞赛初期两轴云台机构，独立完成机械方案设计与 SolidWorks 建模。</div>
         <div class="design-grid">
-          <div class="design-item" onclick="openLightbox('assets/sw_2023_gimbal.png')">
-            <img src="assets/sw_2023_gimbal.png" alt="2023云台设计" loading="lazy">
+          <div class="design-item" onclick="openLightbox('assets/sw_2023_gimbal.jpg')">
+            <img src="assets/sw_2023_gimbal.jpg" alt="2023云台设计" loading="lazy">
             <div class="design-label">两轴云台装配体</div>
           </div>
         </div>
@@ -1049,24 +1049,24 @@
         <div class="design-group-title">2024 赛季 &middot; 全机结构设计</div>
         <div class="design-group-desc">独立负责步兵机器人全机机械结构：四轮麦克纳姆轮全向底盘、中央回转支承、双轴云台、摩擦轮发射机构及弹仓系统。分层模块化架构。</div>
         <div class="design-grid">
-          <div class="design-item" onclick="openLightbox('assets/sw_2024_assembly_1.png')">
-            <img src="assets/sw_2024_assembly_1.png" alt="2024全机总装视角一" loading="lazy">
+          <div class="design-item" onclick="openLightbox('assets/sw_2024_assembly_1.jpg')">
+            <img src="assets/sw_2024_assembly_1.jpg" alt="2024全机总装视角一" loading="lazy">
             <div class="design-label">全机总装 &middot; 视角一</div>
           </div>
-          <div class="design-item" onclick="openLightbox('assets/sw_2024_assembly_2.png')">
-            <img src="assets/sw_2024_assembly_2.png" alt="2024全机总装视角二" loading="lazy">
+          <div class="design-item" onclick="openLightbox('assets/sw_2024_assembly_2.jpg')">
+            <img src="assets/sw_2024_assembly_2.jpg" alt="2024全机总装视角二" loading="lazy">
             <div class="design-label">全机总装 &middot; 视角二</div>
           </div>
-          <div class="design-item" onclick="openLightbox('assets/sw_2024_chassis.png')">
-            <img src="assets/sw_2024_chassis.png" alt="2024底盘设计" loading="lazy">
+          <div class="design-item" onclick="openLightbox('assets/sw_2024_chassis.jpg')">
+            <img src="assets/sw_2024_chassis.jpg" alt="2024底盘设计" loading="lazy">
             <div class="design-label">麦克纳姆轮底盘</div>
           </div>
           <div class="design-item" onclick="openLightbox('assets/sw_2024_gimbal_chassis.jpg')">
             <img src="assets/sw_2024_gimbal_chassis.jpg" alt="2024云台底盘" loading="lazy">
             <div class="design-label">云台与底盘机构</div>
           </div>
-          <div class="design-item" onclick="openLightbox('assets/sw_2024_assembly_3.png')">
-            <img src="assets/sw_2024_assembly_3.png" alt="2024完整总装" loading="lazy">
+          <div class="design-item" onclick="openLightbox('assets/sw_2024_assembly_3.jpg')">
+            <img src="assets/sw_2024_assembly_3.jpg" alt="2024完整总装" loading="lazy">
             <div class="design-label">完整总装 &middot; 含发射机构</div>
           </div>
         </div>
@@ -1234,9 +1234,9 @@
           <span class="year-tag">2026</span> RoboMaster 机甲大师高校联盟赛 · 四川站
         </div>
         <div class="cert-grid">
-          <div class="cert-item" onclick="openLightbox('assets/result_2026_sc_1v1_champion.png')">
+          <div class="cert-item" onclick="openLightbox('assets/result_2026_sc_1v1_champion.jpg')">
             <div class="cert-img-wrap">
-              <img src="assets/result_2026_sc_1v1_champion.png" alt="2026四川站步兵对抗冠军" loading="lazy">
+              <img src="assets/result_2026_sc_1v1_champion.jpg" alt="2026四川站步兵对抗冠军" loading="lazy">
             </div>
             <div class="cert-info">
               <div class="cert-award gold">冠军</div>
@@ -1272,9 +1272,9 @@
           <span class="year-tag">2025</span> RoboMaster 机甲大师高校联盟赛
         </div>
         <div class="cert-grid">
-          <div class="cert-item" onclick="openLightbox('assets/cert_2025_1v1_1st.png')">
+          <div class="cert-item" onclick="openLightbox('assets/cert_2025_1v1_1st.jpg')">
             <div class="cert-img-wrap">
-              <img src="assets/cert_2025_1v1_1st.png" alt="2025步兵对抗一等奖" loading="lazy">
+              <img src="assets/cert_2025_1v1_1st.jpg" alt="2025步兵对抗一等奖" loading="lazy">
             </div>
             <div class="cert-info">
               <div class="cert-award gold">一等奖</div>
@@ -1371,17 +1371,6 @@
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') closeLightbox();
     });
-  </script>
-
-  <script>
-    (function() {
-      var ts = Date.now();
-      document.querySelectorAll('img, video source').forEach(function(el) {
-        if (el.src && el.src.indexOf(window.location.hostname) !== -1) {
-          el.src = el.src.replace(/[?&]t=\d+/, '') + (el.src.indexOf('?') === -1 ? '?' : '&') + 't=' + ts;
-        }
-      });
-    })();
   </script>
 </body>
 </html>
