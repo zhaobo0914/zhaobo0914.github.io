@@ -4,9 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
   <title>赵铂 | RoboMaster 冠军 · 机械设计 · 求职中</title>
   <script>
     (function() {
@@ -48,11 +45,6 @@
       box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
       padding: 1.4rem 1.6rem;
       margin-bottom: 1rem;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .glass-card:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 10px 32px rgba(0, 0, 0, 0.09);
     }
 
     /* ===== Header ===== */
@@ -108,25 +100,6 @@
       border-radius: 16px;
       font-size: 0.85rem;
       font-weight: 500;
-    }
-    .header .download-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      margin-top: 0.8rem;
-      padding: 0.5rem 1.2rem;
-      background: linear-gradient(135deg, #f59e0b, #d97706);
-      color: #fff;
-      border-radius: 20px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
-    }
-    .header .download-btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4);
     }
 
     /* ===== About Me ===== */
@@ -313,151 +286,6 @@
     }
     .highlight-card.gold-highlight .hl-value {
       color: #92400e;
-    }
-
-    /* ===== Skills ===== */
-    .skills-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.45rem;
-    }
-    .skill-tag {
-      padding: 0.3rem 0.8rem;
-      background: linear-gradient(135deg, rgba(99, 102, 241, 0.10), rgba(139, 92, 246, 0.08));
-      border: 1px solid rgba(99, 102, 241, 0.20);
-      border-radius: 16px;
-      font-size: 0.82rem;
-      color: #4338ca;
-      font-weight: 500;
-      transition: all 0.2s;
-    }
-    .skill-tag:hover {
-      background: linear-gradient(135deg, rgba(99, 102, 241, 0.20), rgba(139, 92, 246, 0.15));
-      transform: translateY(-1px);
-    }
-
-    /* ===== Experience Entry ===== */
-    .exp-entry {
-      margin-bottom: 1.2rem;
-      padding-bottom: 1.2rem;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-    }
-    .exp-entry:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
-    .exp-header {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 0.2rem;
-    }
-    .exp-header h3 {
-      font-size: 1rem;
-      font-weight: 700;
-      color: #1e1b4b;
-    }
-    .exp-header .exp-date {
-      font-size: 0.8rem;
-      color: #6b7280;
-      font-weight: 500;
-    }
-    .exp-role {
-      font-size: 0.85rem;
-      color: #4f46e5;
-      font-weight: 500;
-      margin-bottom: 0.3rem;
-    }
-    .exp-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.3rem;
-      margin-bottom: 0.4rem;
-    }
-    .exp-tag {
-      padding: 0.12rem 0.5rem;
-      background: rgba(99, 102, 241, 0.08);
-      border-radius: 5px;
-      font-size: 0.75rem;
-      color: #4f46e5;
-      font-weight: 500;
-    }
-    .exp-list {
-      list-style: none;
-      padding: 0;
-    }
-    .exp-list li {
-      position: relative;
-      padding-left: 1.1rem;
-      margin-bottom: 0.25rem;
-      font-size: 0.88rem;
-      color: #334155;
-    }
-    .exp-list li::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0.6em;
-      width: 5px;
-      height: 5px;
-      background: linear-gradient(135deg, #4f46e5, #a78bfa);
-      border-radius: 50%;
-    }
-    .exp-awards {
-      margin-top: 0.4rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.35rem;
-    }
-    .exp-award {
-      padding: 0.18rem 0.6rem;
-      background: linear-gradient(135deg, rgba(251, 191, 36, 0.15), rgba(245, 158, 11, 0.10));
-      border: 1px solid rgba(251, 191, 36, 0.25);
-      border-radius: 7px;
-      font-size: 0.78rem;
-      color: #92400e;
-      font-weight: 600;
-    }
-    .exp-award.gold {
-      background: linear-gradient(135deg, rgba(251, 191, 36, 0.30), rgba(217, 119, 6, 0.18));
-      border-color: rgba(217, 119, 6, 0.40);
-      box-shadow: 0 2px 8px rgba(251, 191, 36, 0.20);
-    }
-
-    /* ===== Photo Gallery ===== */
-    .photo-gallery {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 0.6rem;
-      margin-top: 0.6rem;
-    }
-    .photo-gallery .photo-item {
-      position: relative;
-      border-radius: 10px;
-      overflow: hidden;
-      cursor: pointer;
-      aspect-ratio: 4/3;
-      background: #f1f5f9;
-    }
-    .photo-gallery .photo-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.3s ease;
-    }
-    .photo-gallery .photo-item:hover img {
-      transform: scale(1.05);
-    }
-    .photo-gallery .photo-item .photo-label {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 0.3rem 0.4rem;
-      background: linear-gradient(transparent, rgba(0,0,0,0.6));
-      color: #fff;
-      font-size: 0.7rem;
-      font-weight: 500;
-      text-align: center;
     }
 
     /* ===== Certificate Gallery ===== */
@@ -759,117 +587,39 @@
     }
     .lightbox .close-btn:hover { opacity: 1; }
 
-    /* ===== Project ===== */
-    .project-entry {
-      margin-bottom: 1.2rem;
-      padding-bottom: 1.2rem;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-    }
-    .project-entry:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
-
-    /* ===== Activities ===== */
-    .activity-item {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: baseline;
-      padding: 0.45rem 0;
-      border-bottom: 1px dashed rgba(0, 0, 0, 0.06);
-    }
-    .activity-item:last-child { border-bottom: none; }
-    .activity-item .act-name {
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: #1e1b4b;
-    }
-    .activity-item .act-award {
-      font-size: 0.82rem;
-      color: #4f46e5;
-      font-weight: 500;
-    }
-
-    /* ===== Footer / Docs Link ===== */
+    /* ===== Footer ===== */
     .footer {
       text-align: center;
       padding: 1.2rem;
     }
-    .footer .docs-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.7rem 1.8rem;
-      background: linear-gradient(135deg, #4f46e5, #7c3aed);
-      color: #fff;
-      border-radius: 30px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.3s;
-      box-shadow: 0 4px 16px rgba(79, 70, 229, 0.30);
-    }
-    .footer .docs-link:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(79, 70, 229, 0.40);
-    }
     .footer .footer-note {
-      margin-top: 1rem;
       font-size: 0.85rem;
       color: #94a3b8;
     }
 
-    /* ===== Video Links ===== */
-    .video-links {
-      display: flex;
-      flex-direction: column;
-      gap: 0.8rem;
+    /* ===== Fade-in Animation ===== */
+    .glass-card {
+      opacity: 0;
+      transform: translateY(18px);
+      animation: fadeSlideIn 0.5s ease forwards;
     }
-    .video-link-card {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      padding: 1rem 1.2rem;
-      background: rgba(99, 102, 241, 0.06);
-      border: 1px solid rgba(99, 102, 241, 0.15);
-      border-radius: 12px;
-      text-decoration: none;
-      color: inherit;
-      transition: all 0.2s;
-      cursor: pointer;
+    .glass-card:nth-child(1) { animation-delay: 0s; }
+    .glass-card:nth-child(2) { animation-delay: 0.06s; }
+    .glass-card:nth-child(3) { animation-delay: 0.12s; }
+    .glass-card:nth-child(4) { animation-delay: 0.18s; }
+    .glass-card:nth-child(5) { animation-delay: 0.24s; }
+    .glass-card:nth-child(6) { animation-delay: 0.3s; }
+    .glass-card:nth-child(7) { animation-delay: 0.36s; }
+    .glass-card:nth-child(8) { animation-delay: 0.42s; }
+    .glass-card:nth-child(9) { animation-delay: 0.48s; }
+    .glass-card:nth-child(10) { animation-delay: 0.54s; }
+    .glass-card:nth-child(n+11) { animation-delay: 0.6s; }
+    @keyframes fadeSlideIn {
+      to { opacity: 1; transform: translateY(0); }
     }
-    .video-link-card:hover {
-      background: rgba(99, 102, 241, 0.12);
-      border-color: rgba(99, 102, 241, 0.30);
-      transform: translateX(4px);
-    }
-    .video-link-icon {
-      flex-shrink: 0;
-      width: 48px;
-      height: 48px;
-      background: linear-gradient(135deg, #4f46e5, #7c3aed);
-      color: #fff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-    }
-    .video-link-info {
-      flex: 1;
-    }
-    .video-link-title {
-      font-size: 1rem;
-      font-weight: 600;
-      color: #1e1b4b;
-      margin-bottom: 0.2rem;
-    }
-    .video-link-desc {
-      font-size: 0.85rem;
-      color: #6b7280;
-    }
-    .video-link-arrow {
-      flex-shrink: 0;
-      font-size: 1.4rem;
-      color: #a5b4fc;
+    .glass-card:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 32px rgba(0, 0, 0, 0.09);
     }
 
     /* ===== Responsive ===== */
@@ -881,7 +631,6 @@
       .header .contact-row { gap: 0.6rem 1rem; font-size: 0.82rem; }
       .section-title { font-size: 1.05rem; }
       .highlight-grid { grid-template-columns: repeat(2, 1fr); }
-      .photo-gallery { grid-template-columns: repeat(3, 1fr); }
       .cert-grid { grid-template-columns: repeat(2, 1fr); }
       .cert-item .cert-img-wrap { height: 150px; }
       .design-grid { grid-template-columns: repeat(2, 1fr); }
@@ -891,13 +640,12 @@
       .video-grid { grid-template-columns: 1fr; }
       .timeline-grid { flex-direction: column; }
       .tl-arrow { transform: rotate(90deg); padding: 0.2rem 0; }
-      .exp-header { flex-direction: column; }
     }
     @media (max-width: 480px) {
       .header h1 { font-size: 1.5rem; }
       .header .subtitle { font-size: 0.9rem; }
-      .photo-gallery { grid-template-columns: repeat(2, 1fr); }
       .highlight-card .hl-value { font-size: 0.9rem; }
+      .skill-cloud-item { font-size: 0.78rem; padding: 0.25rem 0.7rem; }
     }
   </style>
 </head>
@@ -941,6 +689,23 @@
         <span class="about-tag">&#128268; 线路布局</span>
         <span class="about-tag">&#128100; 团队协作</span>
       </div>
+      <div class="skills-cloud" style="margin-top:1rem;">
+        <span class="skill-cloud-item highlight">SolidWorks</span>
+        <span class="skill-cloud-item highlight">CAD 制图</span>
+        <span class="skill-cloud-item">机械结构设计</span>
+        <span class="skill-cloud-item">线路布局</span>
+        <span class="skill-cloud-item">参数化建模</span>
+        <span class="skill-cloud-item">模块化架构</span>
+        <span class="skill-cloud-item">麦克纳姆轮底盘</span>
+        <span class="skill-cloud-item">摩擦轮发射机构</span>
+        <span class="skill-cloud-item">零部件装配</span>
+        <span class="skill-cloud-item">3D 打印</span>
+        <span class="skill-cloud-item">结构迭代优化</span>
+        <span class="skill-cloud-item">装配工艺</span>
+        <span class="skill-cloud-item">低压电工</span>
+        <span class="skill-cloud-item">竞赛项目管理</span>
+        <span class="skill-cloud-item">团队协作</span>
+      </div>
     </div>
 
     <!-- ===== B. Core Highlights ===== -->
@@ -969,31 +734,6 @@
           <div class="hl-value">3赛季<br>7项荣誉</div>
           <div class="hl-label">冠军/一等奖/二等奖/三等奖</div>
         </div>
-      </div>
-    </div>
-
-    <!-- ===== Skills Cloud ===== -->
-    <div class="glass-card">
-      <div class="section-title">
-        <span class="icon">&#9881;</span> 技能图谱
-      </div>
-      <div class="section-subtitle">核心技术栈与工具链 — 覆盖机械设计全流程</div>
-      <div class="skills-cloud">
-        <span class="skill-cloud-item highlight">SolidWorks</span>
-        <span class="skill-cloud-item highlight">CAD 制图</span>
-        <span class="skill-cloud-item">机械结构设计</span>
-        <span class="skill-cloud-item">线路布局</span>
-        <span class="skill-cloud-item">参数化建模</span>
-        <span class="skill-cloud-item">模块化架构</span>
-        <span class="skill-cloud-item">麦克纳姆轮底盘</span>
-        <span class="skill-cloud-item">摩擦轮发射机构</span>
-        <span class="skill-cloud-item">零部件装配</span>
-        <span class="skill-cloud-item">3D 打印</span>
-        <span class="skill-cloud-item">结构迭代优化</span>
-        <span class="skill-cloud-item">装配工艺</span>
-        <span class="skill-cloud-item">低压电工</span>
-        <span class="skill-cloud-item">竞赛项目管理</span>
-        <span class="skill-cloud-item">团队协作</span>
       </div>
     </div>
 
@@ -1122,8 +862,8 @@
             <source src="assets/video_2024_match.mp4" type="video/mp4">
           </video>
           <div class="vid-info">
-            <div class="vid-title">比赛前测试 &middot; 工作室</div>
-            <div class="vid-desc">赛前调试记录</div>
+            <div class="vid-title">2024 赛季 &middot; 机器人实机运行</div>
+            <div class="vid-desc">比赛现场实机展示</div>
           </div>
         </div>
         <div class="video-card">
