@@ -7,7 +7,7 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <title>赵铂 - 个人简历 | 机械设计工程师 | RoboMaster 国家级冠军</title>
+  <title>赵铂 | RoboMaster 冠军 · 机械设计 · 求职中</title>
   <script>
     (function() {
       var CURRENT_VER = '10';
@@ -108,6 +108,78 @@
       border-radius: 16px;
       font-size: 0.85rem;
       font-weight: 500;
+    }
+    .header .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 0.8rem;
+      padding: 0.5rem 1.2rem;
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #fff;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+    }
+    .header .download-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4);
+    }
+
+    /* ===== About Me ===== */
+    .about-content {
+      font-size: 0.92rem;
+      color: #334155;
+      line-height: 1.8;
+    }
+    .about-content p {
+      margin-bottom: 0.6rem;
+    }
+    .about-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.7rem;
+    }
+    .about-tag {
+      padding: 0.2rem 0.7rem;
+      background: rgba(99, 102, 241, 0.08);
+      border: 1px solid rgba(99, 102, 241, 0.18);
+      border-radius: 14px;
+      font-size: 0.78rem;
+      color: #4f46e5;
+      font-weight: 500;
+    }
+
+    /* ===== Skills Cloud ===== */
+    .skills-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.6rem;
+    }
+    .skill-cloud-item {
+      padding: 0.35rem 0.9rem;
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.12), rgba(139, 92, 246, 0.08));
+      border: 1px solid rgba(99, 102, 241, 0.22);
+      border-radius: 20px;
+      font-size: 0.85rem;
+      color: #4338ca;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .skill-cloud-item:hover {
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.22), rgba(139, 92, 246, 0.15));
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.12);
+    }
+    .skill-cloud-item.highlight {
+      background: linear-gradient(135deg, rgba(251, 191, 36, 0.18), rgba(217, 119, 6, 0.10));
+      border-color: rgba(217, 119, 6, 0.35);
+      color: #92400e;
     }
 
     /* ===== Timeline ===== */
@@ -852,6 +924,25 @@
       <div class="school-badge">广州铁路职业技术学院 &middot; 新能源汽车技术 &middot; 2023-2026</div>
     </div>
 
+    <!-- ===== About Me ===== -->
+    <div class="glass-card">
+      <div class="section-title">
+        <span class="icon">&#128100;</span> 关于我
+      </div>
+      <div class="about-content">
+        <p>广州铁路职业技术学院新能源汽车技术专业在读，<strong>3 年 RoboMaster 机甲大师竞赛实战经验</strong>。从 2024 年初次参赛的三等奖，到 2026 年斩获<strong>国家级冠军</strong>，完整经历了竞技机器人从方案设计、机械建模、线路布局到赛场验证的全流程。</p>
+        <p>擅长 <strong>SolidWorks 参数化建模</strong>与<strong>机械结构迭代优化</strong>，主导设计 3 台步兵机器人的机械结构与线路系统。具备扎实的装配工艺能力和工程化思维，能将设计图纸高效转化为可参赛的实体机器人。</p>
+        <p><strong>求职意向：机械设计工程师 / 结构工程师 / 机器人机械工程师</strong></p>
+      </div>
+      <div class="about-tags">
+        <span class="about-tag">&#127942; RoboMaster 国家级冠军</span>
+        <span class="about-tag">&#128208; SolidWorks 熟练</span>
+        <span class="about-tag">&#128736; 机械结构设计</span>
+        <span class="about-tag">&#128268; 线路布局</span>
+        <span class="about-tag">&#128100; 团队协作</span>
+      </div>
+    </div>
+
     <!-- ===== B. Core Highlights ===== -->
     <div class="glass-card">
       <div class="section-title">
@@ -874,10 +965,35 @@
           <div class="hl-label">机械结构 · 线路布局 · 装配调试配合</div>
         </div>
         <div class="highlight-card">
-          <div class="hl-icon">&#128736;</div>
-          <div class="hl-value">故障率<br>降低 20%</div>
-          <div class="hl-label">结构优化 + 装配工艺改进</div>
+          <div class="hl-icon">&#128220;</div>
+          <div class="hl-value">3赛季<br>7项荣誉</div>
+          <div class="hl-label">冠军/一等奖/二等奖/三等奖</div>
         </div>
+      </div>
+    </div>
+
+    <!-- ===== Skills Cloud ===== -->
+    <div class="glass-card">
+      <div class="section-title">
+        <span class="icon">&#9881;</span> 技能图谱
+      </div>
+      <div class="section-subtitle">核心技术栈与工具链 — 覆盖机械设计全流程</div>
+      <div class="skills-cloud">
+        <span class="skill-cloud-item highlight">SolidWorks</span>
+        <span class="skill-cloud-item highlight">CAD 制图</span>
+        <span class="skill-cloud-item">机械结构设计</span>
+        <span class="skill-cloud-item">线路布局</span>
+        <span class="skill-cloud-item">参数化建模</span>
+        <span class="skill-cloud-item">模块化架构</span>
+        <span class="skill-cloud-item">麦克纳姆轮底盘</span>
+        <span class="skill-cloud-item">摩擦轮发射机构</span>
+        <span class="skill-cloud-item">零部件装配</span>
+        <span class="skill-cloud-item">3D 打印</span>
+        <span class="skill-cloud-item">结构迭代优化</span>
+        <span class="skill-cloud-item">装配工艺</span>
+        <span class="skill-cloud-item">低压电工</span>
+        <span class="skill-cloud-item">竞赛项目管理</span>
+        <span class="skill-cloud-item">团队协作</span>
       </div>
     </div>
 
