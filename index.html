@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
@@ -6,6 +6,7 @@
 <meta name="description" content="赵铂 — RoboMaster 国家级冠军 · 机械设计工程师。SolidWorks参数化建模、低压电工持证、金属表面处理。求职：机械设计 / 结构 / 机器人工程师。">
 <meta name="keywords" content="赵铂,机械设计工程师,RoboMaster,机器人,SolidWorks,低压电工">
 <meta name="theme-color" content="#4f46e5">
+<link rel="preconnect" href="https://zhaobo0914.github.io">
 <meta property="og:title" content="赵铂 | RoboMaster 冠军 · 机械设计工程师">
 <meta property="og:description" content="国家级冠军 · SolidWorks · 低压电工持证 · 金属表面处理">
 <meta property="og:image" content="https://zhaobo0914.github.io/assets/robot_real_2026_outdoor.jpg">
@@ -102,15 +103,15 @@ body{font-family:'Microsoft YaHei','PingFang SC',-apple-system,sans-serif;color:
 .ft{text-align:center;padding:1rem;font-size:.8rem;color:#94a3b8}
 
 /* Animations */
-@keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-.card{animation:fadeIn .35s ease backwards}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.card{animation:fadeIn .25s ease backwards}
 .card:nth-child(1){animation-delay:0s}
-.card:nth-child(2){animation-delay:.04s}
-.card:nth-child(3){animation-delay:.07s}
-.card:nth-child(4){animation-delay:.1s}
-.card:nth-child(5){animation-delay:.13s}
-.card:nth-child(6){animation-delay:.16s}
-.card:nth-child(7){animation-delay:.19s}
+.card:nth-child(2){animation-delay:.02s}
+.card:nth-child(3){animation-delay:.04s}
+.card:nth-child(4){animation-delay:.06s}
+.card:nth-child(5){animation-delay:.08s}
+.card:nth-child(6){animation-delay:.1s}
+.card:nth-child(7){animation-delay:.12s}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 
 @media(max-width:768px){
@@ -236,12 +237,12 @@ body{font-family:'Microsoft YaHei','PingFang SC',-apple-system,sans-serif;color:
   <div class="card">
     <div class="section-title"><span class="icon">&#128208;</span> 机械设计作品 <small style="font-weight:400;font-size:.75rem;color:#94a3b8;margin-left:.3rem">（点击查看大图）</small></div>
     <div class="grid3">
-      <div class="grid-item" onclick="openLb('assets/sw_2024_assembly_1.jpg')" tabindex="0" role="button"><img src="assets/sw_2024_assembly_1.jpg" alt="全机总装" loading="lazy" decoding="async"><div class="lbl">步兵机器人 · 全机总装</div></div>
-      <div class="grid-item" onclick="openLb('assets/sw_2024_chassis.jpg')" tabindex="0" role="button"><img src="assets/sw_2024_chassis.jpg" alt="底盘" loading="lazy" decoding="async"><div class="lbl">全向轮 / 麦克纳姆轮底盘</div></div>
-      <div class="grid-item" onclick="openLb('assets/sw_2024_gimbal_chassis.jpg')" tabindex="0" role="button"><img src="assets/sw_2024_gimbal_chassis.jpg" alt="云台" loading="lazy" decoding="async"><div class="lbl">双轴云台 · 底盘机构</div></div>
-      <div class="grid-item" onclick="openLb('assets/sw_2023_gimbal.jpg')" tabindex="0" role="button"><img src="assets/sw_2023_gimbal.jpg" alt="云台装配" loading="lazy" decoding="async"><div class="lbl">两轴云台装配体</div></div>
-      <div class="grid-item" onclick="openLb('assets/sw_2024_assembly_3.jpg')" tabindex="0" role="button"><img src="assets/sw_2024_assembly_3.jpg" alt="发射机构" loading="lazy" decoding="async"><div class="lbl">完整总装 · 含发射机构</div></div>
-      <div class="grid-item" onclick="openLb('assets/wheelleg_real.jpg')" tabindex="0" role="button"><img src="assets/wheelleg_real.jpg" alt="轮腿车" loading="lazy" decoding="async" style="object-fit:contain;background:#f8fafc"><div class="lbl">平衡轮腿车 · 实习项目</div></div>
+      <div class="grid-item" data-lb="assets/sw_2024_assembly_1.jpg" tabindex="0" role="button"><img src="assets/sw_2024_assembly_1.jpg" alt="全机总装" width="320" height="240" loading="lazy" decoding="async" fetchpriority="high"><div class="lbl">步兵机器人 · 全机总装</div></div>
+      <div class="grid-item" data-lb="assets/sw_2024_chassis.jpg" tabindex="0" role="button"><img src="assets/sw_2024_chassis.jpg" alt="底盘" width="320" height="240" loading="lazy" decoding="async" fetchpriority="high"><div class="lbl">全向轮 / 麦克纳姆轮底盘</div></div>
+      <div class="grid-item" data-lb="assets/sw_2024_gimbal_chassis.jpg" tabindex="0" role="button"><img src="assets/sw_2024_gimbal_chassis.jpg" alt="云台" width="320" height="240" loading="lazy" decoding="async" fetchpriority="high"><div class="lbl">双轴云台 · 底盘机构</div></div>
+      <div class="grid-item" data-lb="assets/sw_2023_gimbal.jpg" tabindex="0" role="button"><img src="assets/sw_2023_gimbal.jpg" alt="云台装配" width="320" height="240" loading="lazy" decoding="async"><div class="lbl">两轴云台装配体</div></div>
+      <div class="grid-item" data-lb="assets/sw_2024_assembly_3.jpg" tabindex="0" role="button"><img src="assets/sw_2024_assembly_3.jpg" alt="发射机构" width="320" height="240" loading="lazy" decoding="async"><div class="lbl">完整总装 · 含发射机构</div></div>
+      <div class="grid-item" data-lb="assets/wheelleg_real.jpg" tabindex="0" role="button"><img src="assets/wheelleg_real.jpg" alt="轮腿车" width="320" height="240" loading="lazy" decoding="async" style="object-fit:contain;background:#f8fafc"><div class="lbl">平衡轮腿车 · 实习项目</div></div>
     </div>
   </div>
 
@@ -250,15 +251,11 @@ body{font-family:'Microsoft YaHei','PingFang SC',-apple-system,sans-serif;color:
     <div class="section-title"><span class="icon">&#127909;</span> 机器运行实拍</div>
     <div class="grid2">
       <div class="video-card">
-        <video controls preload="none" poster="assets/robot_real_2024_front.jpg" playsinline disablepictureinpicture>
-          <source src="assets/video_2025_edit.mp4" type="video/mp4">
-        </video>
+        <video class="lazy-video" controls preload="none" poster="assets/robot_real_2024_front.jpg" playsinline disablepictureinpicture data-src="assets/video_2025_edit.mp4" width="480" height="270"></video>
         <div class="v-info"><div class="v-title">步兵机器人实机运行</div></div>
       </div>
       <div class="video-card">
-        <video controls preload="none" poster="assets/robot_real_2024_multi.jpg" playsinline disablepictureinpicture>
-          <source src="assets/video_2024_final.mp4" type="video/mp4">
-        </video>
+        <video class="lazy-video" controls preload="none" poster="assets/robot_real_2024_multi.jpg" playsinline disablepictureinpicture data-src="assets/video_2024_final.mp4" width="480" height="270"></video>
         <div class="v-info"><div class="v-title">赛场测试与实机调试</div></div>
       </div>
     </div>
@@ -268,12 +265,12 @@ body{font-family:'Microsoft YaHei','PingFang SC',-apple-system,sans-serif;color:
   <div class="card">
     <div class="section-title"><span class="icon">&#128247;</span> 竞赛现场</div>
     <div class="grid3">
-      <div class="grid-item" onclick="openLb('assets/team_2026_sc_award.jpg')" tabindex="0" role="button"><img src="assets/team_2026_sc_award.jpg" alt="颁奖" loading="lazy" decoding="async"><div class="lbl">2026 冠军+季军颁奖</div></div>
-      <div class="grid-item" onclick="openLb('assets/robot_real_2026_outdoor.jpg')" tabindex="0" role="button"><img src="assets/robot_real_2026_outdoor.jpg" alt="战车" loading="lazy" decoding="async"><div class="lbl">冠军战车实物特写</div></div>
-      <div class="grid-item" onclick="openLb('assets/team_2024_gd_group.jpg')" tabindex="0" role="button"><img src="assets/team_2024_gd_group.jpg" alt="个人" loading="lazy" decoding="async"><div class="lbl">个人与参赛机器人</div></div>
-      <div class="grid-item" onclick="openLb('assets/robot_real_2024_top1.jpg')" tabindex="0" role="button"><img src="assets/robot_real_2024_top1.jpg" alt="结构" loading="lazy" decoding="async"><div class="lbl">机器人结构细节</div></div>
-      <div class="grid-item" onclick="openLb('assets/robot_real_2024_multi.jpg')" tabindex="0" role="button"><img src="assets/robot_real_2024_multi.jpg" alt="编队" loading="lazy" decoding="async"><div class="lbl">多机型编队</div></div>
-      <div class="grid-item" onclick="openLb('assets/team_2025_fj_personal.jpg')" tabindex="0" role="button"><img src="assets/team_2025_fj_personal.jpg" alt="战队" loading="lazy" decoding="async"><div class="lbl">IRONR战队合影</div></div>
+      <div class="grid-item" data-lb="assets/team_2026_sc_award.jpg" tabindex="0" role="button"><img src="assets/team_2026_sc_award.jpg" alt="颁奖" loading="lazy" decoding="async"><div class="lbl">2026 冠军+季军颁奖</div></div>
+      <div class="grid-item" data-lb="assets/robot_real_2026_outdoor.jpg" tabindex="0" role="button"><img src="assets/robot_real_2026_outdoor.jpg" alt="战车" loading="lazy" decoding="async"><div class="lbl">冠军战车实物特写</div></div>
+      <div class="grid-item" data-lb="assets/team_2024_gd_group.jpg" tabindex="0" role="button"><img src="assets/team_2024_gd_group.jpg" alt="个人" loading="lazy" decoding="async"><div class="lbl">个人与参赛机器人</div></div>
+      <div class="grid-item" data-lb="assets/robot_real_2024_top1.jpg" tabindex="0" role="button"><img src="assets/robot_real_2024_top1.jpg" alt="结构" loading="lazy" decoding="async"><div class="lbl">机器人结构细节</div></div>
+      <div class="grid-item" data-lb="assets/robot_real_2024_multi.jpg" tabindex="0" role="button"><img src="assets/robot_real_2024_multi.jpg" alt="编队" loading="lazy" decoding="async"><div class="lbl">多机型编队</div></div>
+      <div class="grid-item" data-lb="assets/team_2025_fj_personal.jpg" tabindex="0" role="button"><img src="assets/team_2025_fj_personal.jpg" alt="战队" loading="lazy" decoding="async"><div class="lbl">IRONR战队合影</div></div>
     </div>
   </div>
 
@@ -281,19 +278,19 @@ body{font-family:'Microsoft YaHei','PingFang SC',-apple-system,sans-serif;color:
   <div class="card">
     <div class="section-title"><span class="icon">&#127942;</span> 荣誉与资质</div>
     <div class="grid3" style="margin-bottom:.6rem">
-      <div class="ci" onclick="openLb('assets/result_2026_sc_1v1_champion.jpg')" tabindex="0" role="button"><div class="cw"><img src="assets/result_2026_sc_1v1_champion.jpg" alt="" loading="lazy" decoding="async"></div><div class="ci-info"><div class="ci-award gold">冠军</div><div class="ci-name">2026 · 官方公示</div></div></div>
-      <div class="ci" onclick="openLb('assets/cert_2026_sc_champion_3rd.jpg')" tabindex="0" role="button"><div class="cw"><img src="assets/cert_2026_sc_champion_3rd.jpg" alt="" loading="lazy" decoding="async"></div><div class="ci-info"><div class="ci-award gold">冠军 / 季军</div><div class="ci-name">2026 · 获奖证书</div></div></div>
-      <div class="ci" onclick="openLb('assets/result_2026_sc_3v3_3rd.jpg')" tabindex="0" role="button"><div class="cw"><img src="assets/result_2026_sc_3v3_3rd.jpg" alt="" loading="lazy" decoding="async"></div><div class="ci-info"><div class="ci-award">季军</div><div class="ci-name">2026 · 官方公示</div></div></div>
-      <div class="ci" onclick="openLb('assets/cert_2025_1v1_1st.jpg')" tabindex="0" role="button"><div class="cw"><img src="assets/cert_2025_1v1_1st.jpg" alt="" loading="lazy" decoding="async"></div><div class="ci-info"><div class="ci-award gold">一等奖</div><div class="ci-name">2025 · 竞技奖</div></div></div>
-      <div class="ci" onclick="openLb('assets/cert_2025_3v3_2nd.jpg')" tabindex="0" role="button"><div class="cw"><img src="assets/cert_2025_3v3_2nd.jpg" alt="" loading="lazy" decoding="async"></div><div class="ci-info"><div class="ci-award">二等奖</div><div class="ci-name">2025 · 步兵组</div></div></div>
-      <div class="ci" onclick="openLb('assets/cert_2025_fj_3v3_2nd.jpg')" tabindex="0" role="button"><div class="cw"><img src="assets/cert_2025_fj_3v3_2nd.jpg" alt="" loading="lazy" decoding="async"></div><div class="ci-info"><div class="ci-award">二等奖</div><div class="ci-name">2025 · 福建站</div></div></div>
-      <div class="ci" onclick="openLb('assets/cert_2025_fj_1v1_3rd.jpg')" tabindex="0" role="button"><div class="cw"><img src="assets/cert_2025_fj_1v1_3rd.jpg" alt="" loading="lazy" decoding="async"></div><div class="ci-info"><div class="ci-award">三等奖</div><div class="ci-name">2025 · 福建站</div></div></div>
-      <div class="ci" onclick="openLb('assets/cert_2024_gd_3v3_1st.jpg')" tabindex="0" role="button"><div class="cw"><img src="assets/cert_2024_gd_3v3_1st.jpg" alt="" loading="lazy" decoding="async"></div><div class="ci-info"><div class="ci-award gold">一等奖</div><div class="ci-name">2024 · 广东站</div></div></div>
-      <div class="ci" onclick="openLb('assets/cert_2024_gd_1v1_3rd.jpg')" tabindex="0" role="button"><div class="cw"><img src="assets/cert_2024_gd_1v1_3rd.jpg" alt="" loading="lazy" decoding="async"></div><div class="ci-info"><div class="ci-award">三等奖</div><div class="ci-name">2024 · 广东站</div></div></div>
-      <div class="ci" onclick="openLb('assets/cert_2024_gd_1v1_3rd_individual.jpg')" tabindex="0" role="button"><div class="cw"><img src="assets/cert_2024_gd_1v1_3rd_individual.jpg" alt="" loading="lazy" decoding="async"></div><div class="ci-info"><div class="ci-award">三等奖</div><div class="ci-name">2024 · 赵铂个人</div></div></div>
+      <div class="ci" data-lb="assets/result_2026_sc_1v1_champion.jpg" tabindex="0" role="button"><div class="cw"><img src="assets/result_2026_sc_1v1_champion.jpg" alt="" loading="lazy" decoding="async"></div><div class="ci-info"><div class="ci-award gold">冠军</div><div class="ci-name">2026 · 官方公示</div></div></div>
+      <div class="ci" data-lb="assets/cert_2026_sc_champion_3rd.jpg" tabindex="0" role="button"><div class="cw"><img src="assets/cert_2026_sc_champion_3rd.jpg" alt="" loading="lazy" decoding="async"></div><div class="ci-info"><div class="ci-award gold">冠军 / 季军</div><div class="ci-name">2026 · 获奖证书</div></div></div>
+      <div class="ci" data-lb="assets/result_2026_sc_3v3_3rd.jpg" tabindex="0" role="button"><div class="cw"><img src="assets/result_2026_sc_3v3_3rd.jpg" alt="" loading="lazy" decoding="async"></div><div class="ci-info"><div class="ci-award">季军</div><div class="ci-name">2026 · 官方公示</div></div></div>
+      <div class="ci" data-lb="assets/cert_2025_1v1_1st.jpg" tabindex="0" role="button"><div class="cw"><img src="assets/cert_2025_1v1_1st.jpg" alt="" loading="lazy" decoding="async"></div><div class="ci-info"><div class="ci-award gold">一等奖</div><div class="ci-name">2025 · 竞技奖</div></div></div>
+      <div class="ci" data-lb="assets/cert_2025_3v3_2nd.jpg" tabindex="0" role="button"><div class="cw"><img src="assets/cert_2025_3v3_2nd.jpg" alt="" loading="lazy" decoding="async"></div><div class="ci-info"><div class="ci-award">二等奖</div><div class="ci-name">2025 · 步兵组</div></div></div>
+      <div class="ci" data-lb="assets/cert_2025_fj_3v3_2nd.jpg" tabindex="0" role="button"><div class="cw"><img src="assets/cert_2025_fj_3v3_2nd.jpg" alt="" loading="lazy" decoding="async"></div><div class="ci-info"><div class="ci-award">二等奖</div><div class="ci-name">2025 · 福建站</div></div></div>
+      <div class="ci" data-lb="assets/cert_2025_fj_1v1_3rd.jpg" tabindex="0" role="button"><div class="cw"><img src="assets/cert_2025_fj_1v1_3rd.jpg" alt="" loading="lazy" decoding="async"></div><div class="ci-info"><div class="ci-award">三等奖</div><div class="ci-name">2025 · 福建站</div></div></div>
+      <div class="ci" data-lb="assets/cert_2024_gd_3v3_1st.jpg" tabindex="0" role="button"><div class="cw"><img src="assets/cert_2024_gd_3v3_1st.jpg" alt="" loading="lazy" decoding="async"></div><div class="ci-info"><div class="ci-award gold">一等奖</div><div class="ci-name">2024 · 广东站</div></div></div>
+      <div class="ci" data-lb="assets/cert_2024_gd_1v1_3rd.jpg" tabindex="0" role="button"><div class="cw"><img src="assets/cert_2024_gd_1v1_3rd.jpg" alt="" loading="lazy" decoding="async"></div><div class="ci-info"><div class="ci-award">三等奖</div><div class="ci-name">2024 · 广东站</div></div></div>
+      <div class="ci" data-lb="assets/cert_2024_gd_1v1_3rd_individual.jpg" tabindex="0" role="button"><div class="cw"><img src="assets/cert_2024_gd_1v1_3rd_individual.jpg" alt="" loading="lazy" decoding="async"></div><div class="ci-info"><div class="ci-award">三等奖</div><div class="ci-name">2024 · 赵铂个人</div></div></div>
     </div>
     <div class="cred">
-      <div class="cred-item" onclick="openLb('assets/cert_electrician.jpg')" tabindex="0" role="button">
+      <div class="cred-item" data-lb="assets/cert_electrician.jpg" tabindex="0" role="button">
         <img src="assets/cert_electrician.jpg" alt="低压电工证" loading="lazy" decoding="async">
         <div class="cr-info">
           <div class="cr-name">低压电工特种作业操作证</div>
@@ -310,14 +307,48 @@ body{font-family:'Microsoft YaHei','PingFang SC',-apple-system,sans-serif;color:
 (function(){
   var lb=document.getElementById('lb'),img=document.getElementById('lb-img'),body=document.body;
   function openLb(s){img.src=s;lb.classList.add('on');body.style.overflow='hidden'}
-  function closeLb(){lb.classList.remove('on');body.style.overflow=''}
+  function closeLb(){lb.classList.remove('on');body.style.overflow='';img.src=''}
   lb.addEventListener('click',function(e){if(e.target===lb||e.target.classList.contains('x'))closeLb()});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLb()});
-  document.querySelectorAll('[onclick^="openLb"]').forEach(function(el){
-    el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();el.click()}})
+
+  document.addEventListener('click',function(e){
+    var el=e.target.closest('[data-lb]');
+    if(el){e.preventDefault();openLb(el.getAttribute('data-lb'))}
   });
+  document.addEventListener('keydown',function(e){
+    if(e.key!=='Enter'&&e.key!==' ')return;
+    var el=e.target.closest('[data-lb]');
+    if(el){e.preventDefault();openLb(el.getAttribute('data-lb'))}
+  });
+
+  var lazyVideos=document.querySelectorAll('.lazy-video');
+  if('IntersectionObserver' in window){
+    var vo=new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          var v=entry.target;
+          var s=document.createElement('source');
+          s.src=v.getAttribute('data-src');
+          s.type='video/mp4';
+          v.appendChild(s);
+          v.removeAttribute('data-src');
+          vo.unobserve(v);
+        }
+      });
+    },{rootMargin:'300px'});
+    lazyVideos.forEach(function(v){vo.observe(v)});
+  }else{
+    lazyVideos.forEach(function(v){
+      var s=document.createElement('source');
+      s.src=v.getAttribute('data-src');
+      s.type='video/mp4';
+      v.appendChild(s);
+    });
+  }
+
   window.openLb=openLb;window.closeLb=closeLb;
 })();
 </script>
 </body>
 </html>
+
