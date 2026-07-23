@@ -1,387 +1,324 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>赵铂 | RoboMaster 冠军 · 机械设计工程师</title>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { font-size: 16px; scroll-behavior: smooth; }
-    body { font-family: 'Microsoft YaHei', '微软雅黑', Arial, 'PingFang SC', sans-serif; color: #1e293b; background: linear-gradient(135deg, #f0f4ff 0%, #e8f0fe 25%, #fdf2f8 50%, #f0f4ff 75%, #ede9fe 100%); background-attachment: fixed; line-height: 1.6; min-height: 100vh; }
-    .container { max-width: 960px; margin: 0 auto; padding: 1.2rem; }
-    .glass-card { background: rgba(255,255,255,0.78); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.6); border-radius: 16px; box-shadow: 0 6px 24px rgba(0,0,0,0.06); padding: 1.4rem 1.6rem; margin-bottom: 1rem; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>赵铂 | RoboMaster 冠军 · 机械设计工程师</title>
+<style>
+/* ===== Reset ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:'Microsoft YaHei','PingFang SC',-apple-system,sans-serif;color:#1e293b;background:linear-gradient(135deg,#f0f4ff 0%,#e8f0fe 25%,#fdf2f8 50%,#f0f4ff 75%,#ede9fe 100%);background-attachment:fixed;line-height:1.6;min-height:100vh}
 
-    /* Header */
-    .header { text-align: center; padding: 2rem 1.6rem 1.4rem; background: linear-gradient(135deg, rgba(99,102,241,0.12), rgba(139,92,246,0.08)); border: 1px solid rgba(99,102,241,0.15); }
-    .header h1 { font-size: 2.4rem; font-weight: 700; color: #1e1b4b; letter-spacing: 2px; margin-bottom: 0.2rem; }
-    .header .subtitle { font-size: 1.1rem; color: #4f46e5; font-weight: 600; margin-bottom: 0.5rem; }
-    .header .pitch { font-size: 0.92rem; color: #64748b; max-width: 580px; margin: 0 auto 0.8rem; line-height: 1.6; }
-    .header .pitch strong { color: #92400e; }
-    .header .contact-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem 1.8rem; font-size: 0.9rem; color: #475569; }
-    .header .contact-row a { color: #4f46e5; text-decoration: none; }
-    .header .contact-row a:hover { color: #7c3aed; }
-    .header .school-badge { display: inline-block; margin-top: 0.7rem; padding: 0.3rem 1rem; background: linear-gradient(135deg, #4f46e5, #7c3aed); color: #fff; border-radius: 16px; font-size: 0.85rem; font-weight: 500; }
+/* ===== Glass Card ===== */
+.container{max-width:900px;margin:0 auto;padding:1rem 1rem 2rem}
+.card{background:rgba(255,255,255,.8);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.65);border-radius:14px;box-shadow:0 4px 20px rgba(0,0,0,.05);padding:1.3rem 1.4rem;margin-bottom:.85rem;transition:transform .15s ease}
+.card:hover{transform:translateY(-1px)}
+.section-title{font-size:1.05rem;font-weight:700;color:#1e1b4b;margin-bottom:.7rem;padding-bottom:.3rem;border-bottom:2px solid;border-image:linear-gradient(90deg,#4f46e5,#a78bfa) 1;display:flex;align-items:center;gap:.45rem}
+.section-title .icon{width:22px;height:22px;background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;border-radius:5px;font-size:.7rem;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 
-    /* Section Title */
-    .section-title { font-size: 1.15rem; font-weight: 700; color: #1e1b4b; margin-bottom: 0.75rem; padding-bottom: 0.35rem; border-bottom: 2px solid; border-image: linear-gradient(90deg, #4f46e5, #a78bfa) 1; display: flex; align-items: center; gap: 0.5rem; }
-    .section-title .icon { width: 24px; height: 24px; background: linear-gradient(135deg, #4f46e5, #7c3aed); color: #fff; border-radius: 6px; font-size: 0.75rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+/* ===== Header ===== */
+.header-card{text-align:center;padding:2.2rem 1.5rem 1.5rem;background:linear-gradient(135deg,rgba(99,102,241,.12),rgba(139,92,246,.08));border-color:rgba(99,102,241,.18)}
+.header-card h1{font-size:2.2rem;font-weight:700;color:#1e1b4b;letter-spacing:1px;margin-bottom:.15rem}
+.header-card .sub{font-size:1.05rem;color:#4f46e5;font-weight:600}
+.header-card .pitch{font-size:.9rem;color:#64748b;max-width:540px;margin:.4rem auto .7rem;line-height:1.55}
+.header-card .pitch strong{color:#92400e}
+.header-card .contact{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem 1.6rem;font-size:.85rem;color:#475569}
+.header-card .contact a{color:#4f46e5;text-decoration:none}
+.header-card .badge{display:inline-block;margin-top:.7rem;padding:.25rem 1rem;background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;border-radius:14px;font-size:.8rem;font-weight:500}
 
-    /* Skills */
-    .skill-cluster { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-    .skill-tag { padding: 0.3rem 0.8rem; border-radius: 18px; font-size: 0.8rem; font-weight: 600; }
-    .skill-tag.core { background: linear-gradient(135deg, rgba(251,191,36,0.18), rgba(217,119,6,0.10)); border: 1px solid rgba(217,119,6,0.35); color: #92400e; }
-    .skill-tag.mech { background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.2); color: #4338ca; }
-    .skill-tag.surf { background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.25); color: #065f46; }
+/* ===== Skills ===== */
+.skills-row{display:flex;flex-wrap:wrap;gap:.4rem}
+.skl{padding:.3rem .75rem;border-radius:16px;font-size:.78rem;font-weight:600;white-space:nowrap}
+.skl-gold{background:linear-gradient(135deg,rgba(251,191,36,.2),rgba(217,119,6,.1));border:1px solid rgba(217,119,6,.35);color:#92400e}
+.skl-blue{background:rgba(99,102,241,.1);border:1px solid rgba(99,102,241,.22);color:#4338ca}
+.skl-green{background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.28);color:#065f46}
+.skill-line{font-size:.82rem;color:#475569;margin-top:.6rem;line-height:1.5}
+.skill-line strong{color:#1e1b4b}
 
-    /* Highlight Cards */
-    .highlight-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.7rem; margin-bottom: 0.8rem; }
-    .highlight-card { text-align: center; padding: 0.9rem 0.5rem; background: linear-gradient(135deg, rgba(99,102,241,0.07), rgba(139,92,246,0.04)); border: 1px solid rgba(99,102,241,0.13); border-radius: 12px; transition: transform 0.2s; }
-    .highlight-card:hover { transform: translateY(-2px); }
-    .highlight-card .hl-icon { font-size: 1.4rem; margin-bottom: 0.2rem; }
-    .highlight-card .hl-value { font-size: 1rem; font-weight: 700; color: #1e1b4b; line-height: 1.35; }
-    .highlight-card .hl-label { font-size: 0.7rem; color: #6b7280; margin-top: 0.1rem; }
-    .highlight-card.gold { background: linear-gradient(135deg, rgba(251,191,36,0.16), rgba(217,119,6,0.07)); border-color: rgba(217,119,6,0.25); }
-    .highlight-card.gold .hl-value { color: #92400e; }
+/* ===== Stats Grid ===== */
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem;margin-bottom:.7rem}
+.stat-card{text-align:center;padding:.8rem .45rem;border-radius:10px;border:1px solid rgba(99,102,241,.12);background:linear-gradient(135deg,rgba(99,102,241,.06),rgba(139,92,246,.03))}
+.stat-card .s-icon{font-size:1.3rem;margin-bottom:.15rem}
+.stat-card .s-val{font-size:.95rem;font-weight:700;color:#1e1b4b;line-height:1.3}
+.stat-card .s-lbl{font-size:.68rem;color:#6b7280;margin-top:.08rem}
+.stat-card.gold{background:linear-gradient(135deg,rgba(251,191,36,.16),rgba(217,119,6,.07));border-color:rgba(217,119,6,.25)}
+.stat-card.gold .s-val{color:#92400e}
 
-    /* Timeline */
-    .timeline-compact { display: flex; gap: 0.5rem; }
-    .tl-dot { text-align: center; flex: 1; padding: 0.45rem 0.35rem; background: rgba(255,255,255,0.55); border-radius: 10px; border: 1px solid rgba(99,102,241,0.1); }
-    .tl-dot.highlight { background: linear-gradient(135deg, rgba(251,191,36,0.18), rgba(217,119,6,0.08)); border-color: rgba(217,119,6,0.35); }
-    .tl-dot .tl-y { font-size: 1.1rem; font-weight: 800; color: #4f46e5; }
-    .tl-dot.highlight .tl-y { color: #92400e; }
-    .tl-dot .tl-r { font-size: 0.75rem; font-weight: 700; color: #1e1b4b; line-height: 1.4; }
-    .tl-dot .tl-s { font-size: 0.68rem; color: #6b7280; }
+/* ===== Timeline ===== */
+.tl-row{display:flex;gap:.5rem}
+.tl-item{flex:1;text-align:center;padding:.4rem .3rem;border-radius:8px;border:1px solid rgba(99,102,241,.1);background:rgba(255,255,255,.5)}
+.tl-item.hl{background:linear-gradient(135deg,rgba(251,191,36,.2),rgba(217,119,6,.08));border-color:rgba(217,119,6,.35)}
+.tl-item .t-y{font-size:1rem;font-weight:800;color:#4f46e5}
+.tl-item.hl .t-y{color:#92400e}
+.tl-item .t-r{font-size:.72rem;font-weight:700;color:#1e1b4b;line-height:1.35}
+.tl-item .t-s{font-size:.66rem;color:#6b7280}
 
-    /* Grids */
-    .design-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; }
-    .design-item { border-radius: 12px; overflow: hidden; border: 1px solid rgba(99,102,241,0.12); cursor: pointer; transition: transform 0.25s, box-shadow 0.25s; background: #f8fafc; }
-    .design-item:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(79,70,229,0.15); }
-    .design-item img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
-    .design-item .design-label { padding: 0.35rem 0.5rem; text-align: center; font-size: 0.76rem; font-weight: 600; color: #1e1b4b; }
+/* ===== Grids ===== */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:.55rem}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:.7rem}
+.grid-item{border-radius:10px;overflow:hidden;border:1px solid rgba(99,102,241,.1);cursor:pointer;transition:transform .2s,box-shadow .2s;background:#f8fafc}
+.grid-item:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(79,70,229,.12)}
+.grid-item img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.grid-item .lbl{padding:.3rem .4rem;text-align:center;font-size:.73rem;font-weight:600;color:#1e1b4b}
 
-    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; }
-    .gallery-item { border-radius: 12px; overflow: hidden; border: 1px solid rgba(99,102,241,0.12); cursor: pointer; transition: transform 0.25s, box-shadow 0.25s; background: #f8fafc; }
-    .gallery-item:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(79,70,229,0.15); }
-    .gallery-item img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
-    .gallery-item .gallery-label { padding: 0.3rem 0.4rem; text-align: center; font-size: 0.72rem; font-weight: 600; color: #1e1b4b; }
+/* ===== Cert ===== */
+.cert-block{margin-bottom:.8rem}
+.cert-block:last-child{margin-bottom:0}
+.cert-ttl{font-size:.85rem;font-weight:700;color:#4f46e5;margin-bottom:.45rem;padding-left:.45rem;border-left:3px solid #4f46e5;display:flex;align-items:center;gap:.35rem}
+.cert-ttl .yr{font-size:.62rem;padding:.08rem .35rem;background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;border-radius:8px;font-weight:600}
+.ci{border-radius:10px;overflow:hidden;border:1px solid rgba(99,102,241,.1);cursor:pointer;transition:transform .2s,box-shadow .2s;background:rgba(255,255,255,.6)}
+.ci:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(79,70,229,.12)}
+.ci .cw{height:145px;background:#f8fafc;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.ci .cw img{max-width:100%;max-height:100%;object-fit:contain}
+.ci .ci-info{padding:.35rem .4rem .45rem;text-align:center}
+.ci .ci-award{font-size:.76rem;font-weight:700;color:#1e1b4b}
+.ci .ci-award.gold{color:#92400e}
+.ci .ci-name{font-size:.63rem;color:#6b7280;margin-top:.03rem}
+.ci .ci-tag{display:inline-block;margin-top:.15rem;padding:.05rem .28rem;background:linear-gradient(135deg,rgba(251,191,36,.18),rgba(217,119,6,.1));border:1px solid rgba(217,119,6,.25);border-radius:5px;font-size:.6rem;color:#92400e;font-weight:600}
 
-    .cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; }
-    .cert-item { background: rgba(255,255,255,0.65); border-radius: 12px; overflow: hidden; border: 1px solid rgba(99,102,241,0.12); cursor: pointer; transition: transform 0.25s, box-shadow 0.25s; }
-    .cert-item:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(79,70,229,0.15); }
-    .cert-item .cert-img-wrap { width: 100%; height: 155px; background: #f8fafc; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-    .cert-item .cert-img-wrap img { max-width: 100%; max-height: 100%; object-fit: contain; }
-    .cert-item .cert-info { padding: 0.4rem 0.45rem 0.5rem; text-align: center; }
-    .cert-item .cert-award { font-size: 0.8rem; font-weight: 700; color: #1e1b4b; }
-    .cert-item .cert-award.gold { color: #92400e; }
-    .cert-item .cert-name { font-size: 0.66rem; color: #6b7280; margin-top: 0.05rem; }
-    .cert-item .cert-badge { display: inline-block; margin-top: 0.2rem; padding: 0.06rem 0.3rem; background: linear-gradient(135deg, rgba(251,191,36,0.18), rgba(217,119,6,0.10)); border: 1px solid rgba(217,119,6,0.25); border-radius: 6px; font-size: 0.63rem; color: #92400e; font-weight: 600; }
-    .cert-year { margin-bottom: 0.9rem; }
-    .cert-year:last-child { margin-bottom: 0; }
-    .cert-year-title { font-size: 0.88rem; font-weight: 700; color: #4f46e5; margin-bottom: 0.5rem; padding-left: 0.5rem; border-left: 3px solid #4f46e5; display: flex; align-items: center; gap: 0.4rem; }
-    .cert-year-title .year-tag { font-size: 0.65rem; padding: 0.1rem 0.4rem; background: linear-gradient(135deg, #4f46e5, #7c3aed); color: #fff; border-radius: 10px; font-weight: 600; }
+/* ===== Video ===== */
+.video-card{border-radius:10px;overflow:hidden;border:1px solid rgba(99,102,241,.1);background:rgba(255,255,255,.65);transition:transform .2s,box-shadow .2s}
+.video-card:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(79,70,229,.12)}
+.video-card video{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:#0f0f0f}
+.video-card .v-info{padding:.4rem .55rem}
+.video-card .v-title{font-size:.82rem;font-weight:700;color:#1e1b4b}
 
-    .video-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
-    .video-card { background: rgba(255,255,255,0.7); border: 1px solid rgba(99,102,241,0.12); border-radius: 12px; overflow: hidden; transition: transform 0.25s, box-shadow 0.25s; }
-    .video-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(79,70,229,0.15); }
-    .video-card video { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #0f0f0f; }
-    .video-card .vid-info { padding: 0.45rem 0.6rem; }
-    .video-card .vid-title { font-size: 0.85rem; font-weight: 700; color: #1e1b4b; }
+/* ===== Credential ===== */
+.cred{display:grid;grid-template-columns:1fr;max-width:360px;gap:.6rem}
+.cred-item{border-radius:10px;overflow:hidden;border:1px solid rgba(99,102,241,.1);cursor:pointer;transition:transform .2s,box-shadow .2s;background:rgba(255,255,255,.65)}
+.cred-item:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(79,70,229,.12)}
+.cred-item img{width:100%;max-height:340px;object-fit:cover;display:block}
+.cred-item .cr-info{padding:.45rem .55rem;text-align:center}
+.cred-item .cr-name{font-size:.88rem;font-weight:700;color:#1e1b4b;margin-bottom:.05rem}
+.cred-item .cr-detail{font-size:.7rem;color:#6b7280}
+.cred-item .cr-detail span{color:#4f46e5;font-weight:600}
 
-    .credential-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
-    .credential-item { background: rgba(255,255,255,0.7); border: 1px solid rgba(99,102,241,0.12); border-radius: 12px; overflow: hidden; cursor: pointer; transition: transform 0.25s, box-shadow 0.25s; }
-    .credential-item:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(79,70,229,0.15); }
-    .credential-item img { width: 100%; height: 220px; object-fit: cover; display: block; }
-    .credential-item .cred-info { padding: 0.55rem 0.6rem; text-align: center; }
-    .credential-item .cred-name { font-size: 0.9rem; font-weight: 700; color: #1e1b4b; margin-bottom: 0.1rem; }
-    .credential-item .cred-detail { font-size: 0.73rem; color: #6b7280; }
-    .credential-item .cred-detail span { color: #4f46e5; font-weight: 600; }
+/* ===== Lightbox ===== */
+.lb{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.85);z-index:9999;justify-content:center;align-items:center;padding:2rem}
+.lb.on{display:flex}
+.lb img{max-width:90vw;max-height:90vh;border-radius:10px;box-shadow:0 20px 60px rgba(0,0,0,.5);object-fit:contain}
+.lb .x{position:absolute;top:1.2rem;right:1.8rem;color:#fff;font-size:2rem;cursor:pointer;opacity:.8;background:none;border:none}
+.lb .x:hover{opacity:1}
 
-    .lightbox { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.85); z-index: 9999; justify-content: center; align-items: center; padding: 2rem; }
-    .lightbox.active { display: flex; }
-    .lightbox img { max-width: 90vw; max-height: 90vh; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.5); object-fit: contain; }
-    .lightbox .close-btn { position: absolute; top: 1.5rem; right: 2rem; color: #fff; font-size: 2rem; cursor: pointer; opacity: 0.8; background: none; border: none; }
-    .lightbox .close-btn:hover { opacity: 1; }
+/* ===== Footer ===== */
+.ft{text-align:center;padding:1rem}
+.ft .ft-note{font-size:.82rem;color:#94a3b8}
 
-    .footer { text-align: center; padding: 1.2rem; }
-    .footer .footer-note { font-size: 0.85rem; color: #94a3b8; }
+/* ===== Animations ===== */
+@keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.card{animation:fadeIn .35s ease forwards}
+.card:nth-child(1){animation-delay:0s}
+.card:nth-child(2){animation-delay:.04s}
+.card:nth-child(3){animation-delay:.08s}
+.card:nth-child(4){animation-delay:.12s}
+.card:nth-child(5){animation-delay:.16s}
+.card:nth-child(6){animation-delay:.2s}
+.card:nth-child(7){animation-delay:.24s}
+.card:nth-child(8){animation-delay:.28s}
+.card:nth-child(n+9){animation-delay:.32s}
 
-    /* Animations */
-    .glass-card { opacity: 0; transform: translateY(18px); animation: fadeSlideIn 0.4s ease forwards; }
-    .glass-card:nth-child(1) { animation-delay: 0s; }
-    .glass-card:nth-child(2) { animation-delay: 0.04s; }
-    .glass-card:nth-child(3) { animation-delay: 0.08s; }
-    .glass-card:nth-child(4) { animation-delay: 0.12s; }
-    .glass-card:nth-child(5) { animation-delay: 0.16s; }
-    .glass-card:nth-child(6) { animation-delay: 0.2s; }
-    .glass-card:nth-child(7) { animation-delay: 0.24s; }
-    .glass-card:nth-child(8) { animation-delay: 0.28s; }
-    .glass-card:nth-child(n+9) { animation-delay: 0.32s; }
-    @keyframes fadeSlideIn { to { opacity: 1; transform: translateY(0); } }
-
-    @media (max-width: 768px) {
-      .container { padding: 0.7rem; }
-      .glass-card { padding: 1rem 1rem; }
-      .header { padding: 1.5rem 1rem 1rem; }
-      .header h1 { font-size: 1.8rem; }
-      .section-title { font-size: 1.05rem; }
-      .highlight-grid { grid-template-columns: repeat(2, 1fr); }
-      .design-grid { grid-template-columns: repeat(2, 1fr); }
-      .cert-grid { grid-template-columns: repeat(2, 1fr); }
-      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-      .credential-grid { grid-template-columns: 1fr; }
-      .video-grid { grid-template-columns: 1fr; }
-      .timeline-compact { flex-direction: column; gap: 0.3rem; }
-    }
-    @media (max-width: 480px) {
-      .header h1 { font-size: 1.5rem; }
-      .header .subtitle { font-size: 0.9rem; }
-      .highlight-card .hl-value { font-size: 0.85rem; }
-      .skill-tag { font-size: 0.75rem; padding: 0.25rem 0.6rem; }
-    }
-  </style>
+/* ===== Responsive ===== */
+@media(max-width:768px){
+  .container{padding:.6rem}
+  .card{padding:1rem .95rem;margin-bottom:.7rem}
+  .header-card{padding:1.4rem 1rem 1.1rem}
+  .header-card h1{font-size:1.7rem}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .grid3{grid-template-columns:repeat(2,1fr)}
+  .tl-row{flex-direction:column;gap:.3rem}
+  .video-card .v-title{font-size:.76rem}
+}
+@media(max-width:480px){
+  .header-card h1{font-size:1.4rem}
+  .header-card .sub{font-size:.9rem}
+  .header-card .pitch{font-size:.82rem}
+  .section-title{font-size:.95rem}
+  .stats-grid{grid-template-columns:1fr 1fr;gap:.4rem}
+  .grid3{grid-template-columns:1fr 1fr;gap:.4rem}
+  .skl{font-size:.73rem;padding:.25rem .6rem}
+  .stat-card .s-val{font-size:.82rem}
+  .cert-ttl{font-size:.78rem}
+  .ci .cw{height:120px}
+}
+</style>
 </head>
 <body>
 
-  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <button class="close-btn" onclick="closeLightbox()">&times;</button>
-    <img id="lightbox-img" src="" alt="预览">
+<div class="lb" id="lb" onclick="closeLb()">
+  <button class="x" onclick="closeLb()">&times;</button>
+  <img id="lb-img" src="" alt="">
+</div>
+
+<div class="container">
+
+  <!-- Header -->
+  <div class="card header-card">
+    <h1>赵铂</h1>
+    <div class="sub">RoboMaster 机甲大师 · 国家级冠军</div>
+    <div class="pitch">3年3赛季<strong>独立负责机械设计与制造</strong>——从三等奖到冠军的完整实战成长路径。<strong>能把设计图纸变成上场竞技的机器人</strong>。</div>
+    <div class="contact">
+      <span>&#9742; 15070680950</span>
+      <span>&#9993; <a href="mailto:3396481237@qq.com">3396481237@qq.com</a></span>
+      <span>&#9873; 深圳市</span>
+    </div>
+    <div class="badge">广州铁路职业技术学院 · 新能源汽车技术 · 2023-2026</div>
   </div>
 
-  <div class="container">
-
-    <!-- Header -->
-    <div class="glass-card header">
-      <h1>赵铂</h1>
-      <div class="subtitle">RoboMaster 机甲大师 · 国家级冠军</div>
-      <div class="pitch">3年3赛季<strong>独立负责机械设计与制造</strong>，从新人到冠军的完整实战路径。擅长 SolidWorks 建模、金属表面处理，<strong>把图纸变成能上场比赛的机器人</strong>。</div>
-      <div class="contact-row">
-        <span>&#9742; 15070680950</span>
-        <span>&#9993; <a href="mailto:3396481237@qq.com">3396481237@qq.com</a></span>
-        <span>&#9873; 深圳市</span>
-      </div>
-      <div class="school-badge">广州铁路职业技术学院 · 新能源汽车技术 · 2023-2026</div>
+  <!-- 技能 -->
+  <div class="card">
+    <div class="section-title"><span class="icon">&#128736;</span> 技能图谱</div>
+    <div class="skills-row">
+      <span class="skl skl-gold">SolidWorks</span>
+      <span class="skl skl-gold">CAD 制图</span>
+      <span class="skl skl-gold">低压电工（持证）</span>
+      <span class="skl skl-blue">机械结构设计</span>
+      <span class="skl skl-blue">参数化建模</span>
+      <span class="skl skl-blue">模块化架构</span>
+      <span class="skl skl-blue">麦克纳姆轮底盘</span>
+      <span class="skl skl-blue">摩擦轮发射机构</span>
+      <span class="skl skl-blue">双轴云台</span>
+      <span class="skl skl-blue">零部件装配</span>
+      <span class="skl skl-blue">线路布局</span>
+      <span class="skl skl-blue">3D 打印</span>
+      <span class="skl skl-blue">结构迭代优化</span>
+      <span class="skl skl-blue">装配工艺</span>
+      <span class="skl skl-green">金属表面处理</span>
+      <span class="skl skl-green">钝化工艺</span>
+      <span class="skl skl-green">脱脂处理</span>
+      <span class="skl skl-green">硅烷前处理</span>
     </div>
-
-    <!-- 核心能力 -->
-    <div class="glass-card">
-      <div class="section-title"><span class="icon">&#128736;</span> 我能做什么</div>
-      <div style="display:flex;flex-wrap:wrap;gap:0.6rem 0.4rem;">
-        <div class="skill-tag core">SolidWorks · 参数化建模</div>
-        <div class="skill-tag core">CAD 制图</div>
-        <div class="skill-tag mech">机械结构设计</div>
-        <div class="skill-tag mech">麦克纳姆轮底盘</div>
-        <div class="skill-tag mech">摩擦轮发射机构</div>
-        <div class="skill-tag mech">双轴云台</div>
-        <div class="skill-tag mech">模块化架构</div>
-        <div class="skill-tag mech">零部件装配</div>
-        <div class="skill-tag mech">线路布局</div>
-        <div class="skill-tag mech">3D 打印</div>
-        <div class="skill-tag mech">结构迭代优化</div>
-        <div class="skill-tag surf">金属表面处理</div>
-        <div class="skill-tag surf">钝化 · 脱脂</div>
-        <div class="skill-tag surf">硅烷前处理</div>
-        <div class="skill-tag core">低压电工（持证）</div>
-      </div>
-      <div style="font-size:0.82rem;color:#64748b;margin-top:0.6rem;line-height:1.5;">
-        广州铁路职业技术学院新能源汽车技术专业<strong>已毕业</strong>。曾在<strong>凯密特尔代理商实习</strong>，负责技术服务方向，掌握<strong>钝化、脱脂、硅烷前处理</strong>等金属表面处理工艺。
-      </div>
-      <div style="font-size:0.85rem;margin-top:0.5rem;"><strong>求职意向：机械设计工程师 / 结构工程师 / 机器人机械工程师</strong></div>
-    </div>
-
-    <!-- 战绩与成长 -->
-    <div class="glass-card">
-      <div class="section-title"><span class="icon">&#9733;</span> 战绩与成长</div>
-      <div class="highlight-grid">
-        <div class="highlight-card gold">
-          <div class="hl-icon">&#127942;</div>
-          <div class="hl-value">RoboMaster 2026<br>国家级冠军</div>
-          <div class="hl-label">步兵对抗（1V1）</div>
-        </div>
-        <div class="highlight-card">
-          <div class="hl-icon">&#128200;</div>
-          <div class="hl-value">3年3赛季<br>7项荣誉</div>
-          <div class="hl-label">三等奖&rarr;冠军</div>
-        </div>
-        <div class="highlight-card">
-          <div class="hl-icon">&#129302;</div>
-          <div class="hl-value">主导设计<br>3台机器人</div>
-          <div class="hl-label">机械结构 · 线路布局</div>
-        </div>
-        <div class="highlight-card">
-          <div class="hl-icon">&#127959;</div>
-          <div class="hl-value">3站参赛<br>广东&rarr;福建&rarr;四川</div>
-          <div class="hl-label">IRONR战队核心成员</div>
-        </div>
-      </div>
-      <div class="timeline-compact">
-        <div class="tl-dot"><div class="tl-y">2024</div><div class="tl-r">3V3 一等奖 · 1V1 三等奖</div><div class="tl-s">广东站</div></div>
-        <div class="tl-dot"><div class="tl-y">2025</div><div class="tl-r">1V1 一等奖 · 3V3 二等奖</div><div class="tl-s">福建站</div></div>
-        <div class="tl-dot highlight"><div class="tl-y">2026</div><div class="tl-r">&#127942; 1V1 冠军 · 3V3 季军</div><div class="tl-s">四川站</div></div>
-      </div>
-    </div>
-
-    <!-- 设计能力 -->
-    <div class="glass-card">
-      <div class="section-title"><span class="icon">&#128208;</span> 机械设计（SolidWorks 图纸）</div>
-      <div class="design-grid">
-        <div class="design-item" onclick="openLightbox('assets/sw_2024_assembly_1.jpg')">
-          <img src="assets/sw_2024_assembly_1.jpg" alt="全机总装" loading="lazy">
-          <div class="design-label">全机总装</div>
-        </div>
-        <div class="design-item" onclick="openLightbox('assets/sw_2024_chassis.jpg')">
-          <img src="assets/sw_2024_chassis.jpg" alt="底盘" loading="lazy">
-          <div class="design-label">麦克纳姆轮底盘</div>
-        </div>
-        <div class="design-item" onclick="openLightbox('assets/sw_2024_gimbal_chassis.jpg')">
-          <img src="assets/sw_2024_gimbal_chassis.jpg" alt="云台" loading="lazy">
-          <div class="design-label">双轴云台 · 底盘机构</div>
-        </div>
-        <div class="design-item" onclick="openLightbox('assets/sw_2023_gimbal.jpg')">
-          <img src="assets/sw_2023_gimbal.jpg" alt="云台装配" loading="lazy">
-          <div class="design-label">云台装配体</div>
-        </div>
-        <div class="design-item" onclick="openLightbox('assets/sw_2024_assembly_3.jpg')">
-          <img src="assets/sw_2024_assembly_3.jpg" alt="含发射机构" loading="lazy">
-          <div class="design-label">总装 · 含发射机构</div>
-        </div>
-        <div class="design-item" onclick="openLightbox('assets/wheelleg_real.jpg')">
-          <img src="assets/wheelleg_real.jpg" alt="平衡轮腿车" loading="lazy" style="object-fit:contain;background:#f8fafc;">
-          <div class="design-label">平衡轮腿车实物</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 视频 -->
-    <div class="glass-card">
-      <div class="section-title"><span class="icon">&#127909;</span> 机器运行视频</div>
-      <div class="video-grid">
-        <div class="video-card">
-          <video controls preload="none" poster="assets/robot_real_2024_front.jpg">
-            <source src="assets/video_2025_edit.mp4" type="video/mp4">
-          </video>
-          <div class="vid-info"><div class="vid-title">步兵机器人实机运行</div></div>
-        </div>
-        <div class="video-card">
-          <video controls preload="none" poster="assets/robot_real_2023_3.jpg">
-            <source src="assets/video_2024_robot.mp4" type="video/mp4">
-          </video>
-          <div class="vid-info"><div class="vid-title">比赛前测试 · 工作室</div></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 实战掠影 -->
-    <div class="glass-card">
-      <div class="section-title"><span class="icon">&#128247;</span> 实战掠影</div>
-      <div class="gallery-grid">
-        <div class="gallery-item" onclick="openLightbox('assets/team_2026_sc_award.jpg')">
-          <img src="assets/team_2026_sc_award.jpg" alt="冠军颁奖" loading="lazy">
-          <div class="gallery-label">冠军+季军颁奖</div>
-        </div>
-        <div class="gallery-item" onclick="openLightbox('assets/robot_real_2026_outdoor.jpg')">
-          <img src="assets/robot_real_2026_outdoor.jpg" alt="冠军战车" loading="lazy">
-          <div class="gallery-label">冠军战车特写</div>
-        </div>
-        <div class="gallery-item" onclick="openLightbox('assets/team_2024_gd_group.jpg')">
-          <img src="assets/team_2024_gd_group.jpg" alt="个人" loading="lazy">
-          <div class="gallery-label">个人与参赛机器人</div>
-        </div>
-        <div class="gallery-item" onclick="openLightbox('assets/robot_real_2024_top1.jpg')">
-          <img src="assets/robot_real_2024_top1.jpg" alt="结构" loading="lazy">
-          <div class="gallery-label">结构细节</div>
-        </div>
-        <div class="gallery-item" onclick="openLightbox('assets/robot_real_2024_multi.jpg')">
-          <img src="assets/robot_real_2024_multi.jpg" alt="编队" loading="lazy">
-          <div class="gallery-label">多机型编队</div>
-        </div>
-        <div class="gallery-item" onclick="openLightbox('assets/team_2025_fj_personal.jpg')">
-          <img src="assets/team_2025_fj_personal.jpg" alt="战队" loading="lazy">
-          <div class="gallery-label">IRONR战队合影</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 荣誉墙 -->
-    <div class="glass-card">
-      <div class="section-title"><span class="icon">&#127942;</span> 竞赛荣誉</div>
-      <div class="cert-year">
-        <div class="cert-year-title"><span class="year-tag">2026</span> 四川站</div>
-        <div class="cert-grid">
-          <div class="cert-item" onclick="openLightbox('assets/result_2026_sc_1v1_champion.jpg')">
-            <div class="cert-img-wrap"><img src="assets/result_2026_sc_1v1_champion.jpg" alt="冠军" loading="lazy"></div>
-            <div class="cert-info"><div class="cert-award gold">冠军</div><div class="cert-name">官方公示</div><div class="cert-badge">IRONR战队</div></div>
-          </div>
-          <div class="cert-item" onclick="openLightbox('assets/cert_2026_sc_champion_3rd.jpg')">
-            <div class="cert-img-wrap"><img src="assets/cert_2026_sc_champion_3rd.jpg" alt="证书" loading="lazy"></div>
-            <div class="cert-info"><div class="cert-award gold">冠军/季军</div><div class="cert-name">获奖证书</div></div>
-          </div>
-          <div class="cert-item" onclick="openLightbox('assets/result_2026_sc_3v3_3rd.jpg')">
-            <div class="cert-img-wrap"><img src="assets/result_2026_sc_3v3_3rd.jpg" alt="季军" loading="lazy"></div>
-            <div class="cert-info"><div class="cert-award">季军</div><div class="cert-name">官方公示</div><div class="cert-badge">IRONR战队</div></div>
-          </div>
-        </div>
-      </div>
-      <div class="cert-year">
-        <div class="cert-year-title"><span class="year-tag">2025</span> 高校联盟赛</div>
-        <div class="cert-grid">
-          <div class="cert-item" onclick="openLightbox('assets/cert_2025_1v1_1st.jpg')">
-            <div class="cert-img-wrap"><img src="assets/cert_2025_1v1_1st.jpg" alt="一等奖" loading="lazy"></div>
-            <div class="cert-info"><div class="cert-award gold">一等奖</div><div class="cert-name">机器人竞技奖</div></div>
-          </div>
-          <div class="cert-item" onclick="openLightbox('assets/cert_2025_3v3_2nd.jpg')">
-            <div class="cert-img-wrap"><img src="assets/cert_2025_3v3_2nd.jpg" alt="二等奖" loading="lazy"></div>
-            <div class="cert-info"><div class="cert-award">二等奖</div><div class="cert-name">步兵机器人组</div></div>
-          </div>
-          <div class="cert-item" onclick="openLightbox('assets/cert_2025_fj_3v3_2nd.jpg')">
-            <div class="cert-img-wrap"><img src="assets/cert_2025_fj_3v3_2nd.jpg" alt="二等奖" loading="lazy"></div>
-            <div class="cert-info"><div class="cert-award">二等奖</div><div class="cert-name">福建站</div></div>
-          </div>
-          <div class="cert-item" onclick="openLightbox('assets/cert_2025_fj_1v1_3rd.jpg')">
-            <div class="cert-img-wrap"><img src="assets/cert_2025_fj_1v1_3rd.jpg" alt="三等奖" loading="lazy"></div>
-            <div class="cert-info"><div class="cert-award">三等奖</div><div class="cert-name">福建站</div></div>
-          </div>
-        </div>
-      </div>
-      <div class="cert-year">
-        <div class="cert-year-title"><span class="year-tag">2024</span> 广东站</div>
-        <div class="cert-grid">
-          <div class="cert-item" onclick="openLightbox('assets/cert_2024_gd_3v3_1st.jpg')">
-            <div class="cert-img-wrap"><img src="assets/cert_2024_gd_3v3_1st.jpg" alt="一等奖" loading="lazy"></div>
-            <div class="cert-info"><div class="cert-award gold">一等奖</div><div class="cert-name">非甲级队伍</div></div>
-          </div>
-          <div class="cert-item" onclick="openLightbox('assets/cert_2024_gd_1v1_3rd.jpg')">
-            <div class="cert-img-wrap"><img src="assets/cert_2024_gd_1v1_3rd.jpg" alt="三等奖" loading="lazy"></div>
-            <div class="cert-info"><div class="cert-award">三等奖</div><div class="cert-name">非甲级队伍</div></div>
-          </div>
-          <div class="cert-item" onclick="openLightbox('assets/cert_2024_gd_1v1_3rd_individual.jpg')">
-            <div class="cert-img-wrap"><img src="assets/cert_2024_gd_1v1_3rd_individual.jpg" alt="个人" loading="lazy"></div>
-            <div class="cert-info"><div class="cert-award">三等奖</div><div class="cert-name">赵铂个人证书</div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 资质 -->
-    <div class="glass-card">
-      <div class="section-title"><span class="icon">&#128196;</span> 职业资质</div>
-      <div class="credential-grid">
-        <div class="credential-item" onclick="openLightbox('assets/cert_electrician.jpg')">
-          <img src="assets/cert_electrician.jpg" alt="低压电工证" loading="lazy">
-          <div class="cred-info">
-            <div class="cred-name">低压电工特种作业操作证</div>
-            <div class="cred-detail">签发：<span>广州市应急管理局</span> · 有效期至 2031.07.10</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer"><div class="footer-note">赵铂 · RoboMaster 国家级冠军 · 机械设计工程师</div></div>
+    <div class="skill-line">广州铁路职业技术学院<strong>已毕业</strong>，求职意向：<strong>机械设计工程师 / 结构工程师 / 机器人机械工程师</strong></div>
   </div>
 
-  <script>
-    function openLightbox(src){var l=document.getElementById('lightbox');document.getElementById('lightbox-img').src=src;l.classList.add('active');document.body.style.overflow='hidden';}
-    function closeLightbox(){document.getElementById('lightbox').classList.remove('active');document.body.style.overflow='';}
-    document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLightbox();});
-  </script>
+  <!-- 战绩与成长 -->
+  <div class="card">
+    <div class="section-title"><span class="icon">&#9733;</span> 战绩与成长</div>
+    <div class="stats-grid">
+      <div class="stat-card gold">
+        <div class="s-icon">&#127942;</div>
+        <div class="s-val">RoboMaster 2026<br>国家级冠军</div>
+        <div class="s-lbl">步兵对抗（1V1）</div>
+      </div>
+      <div class="stat-card">
+        <div class="s-icon">&#128200;</div>
+        <div class="s-val">3年3赛季<br>7项荣誉</div>
+        <div class="s-lbl">三等奖 到 冠军</div>
+      </div>
+      <div class="stat-card">
+        <div class="s-icon">&#129302;</div>
+        <div class="s-val">主导设计<br>3台机器人</div>
+        <div class="s-lbl">机械结构 · 线路布局</div>
+      </div>
+      <div class="stat-card">
+        <div class="s-icon">&#127959;</div>
+        <div class="s-val">3站参赛<br>广东 福建 四川</div>
+        <div class="s-lbl">IRONR战队核心成员</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-item"><div class="t-y">2024</div><div class="t-r">3V3 一等奖 · 1V1 三等奖</div><div class="t-s">广东站</div></div>
+      <div class="tl-item"><div class="t-y">2025</div><div class="t-r">1V1 一等奖 · 3V3 二等奖</div><div class="t-s">福建站</div></div>
+      <div class="tl-item hl"><div class="t-y">2026</div><div class="t-r">&#127942; 1V1 冠军 · 3V3 季军</div><div class="t-s">四川站</div></div>
+    </div>
+  </div>
+
+  <!-- 设计 -->
+  <div class="card">
+    <div class="section-title"><span class="icon">&#128208;</span> 机械设计（SolidWorks 图纸）</div>
+    <div class="grid3">
+      <div class="grid-item" onclick="openLb('assets/sw_2024_assembly_1.jpg')"><img src="assets/sw_2024_assembly_1.jpg" alt="全机总装" loading="lazy"><div class="lbl">步兵机器人 · 全机总装</div></div>
+      <div class="grid-item" onclick="openLb('assets/sw_2024_chassis.jpg')"><img src="assets/sw_2024_chassis.jpg" alt="底盘" loading="lazy"><div class="lbl">麦克纳姆轮全向底盘</div></div>
+      <div class="grid-item" onclick="openLb('assets/sw_2024_gimbal_chassis.jpg')"><img src="assets/sw_2024_gimbal_chassis.jpg" alt="云台" loading="lazy"><div class="lbl">双轴云台 · 底盘机构</div></div>
+      <div class="grid-item" onclick="openLb('assets/sw_2023_gimbal.jpg')"><img src="assets/sw_2023_gimbal.jpg" alt="云台装配" loading="lazy"><div class="lbl">两轴云台装配体</div></div>
+      <div class="grid-item" onclick="openLb('assets/sw_2024_assembly_3.jpg')"><img src="assets/sw_2024_assembly_3.jpg" alt="发射机构" loading="lazy"><div class="lbl">完整总装 · 含发射机构</div></div>
+      <div class="grid-item" onclick="openLb('assets/wheelleg_real.jpg')"><img src="assets/wheelleg_real.jpg" alt="平衡轮腿车" loading="lazy" style="object-fit:contain;background:#f8fafc"><div class="lbl">平衡轮腿车 · 实习项目实物</div></div>
+    </div>
+  </div>
+
+  <!-- 视频 -->
+  <div class="card">
+    <div class="section-title"><span class="icon">&#127909;</span> 机器人运行演示</div>
+    <div class="grid2">
+      <div class="video-card">
+        <video controls preload="none" poster="assets/robot_real_2024_front.jpg">
+          <source src="assets/video_2025_edit.mp4" type="video/mp4">
+        </video>
+        <div class="v-info"><div class="v-title">步兵机器人实机运行</div></div>
+      </div>
+      <div class="video-card">
+        <video controls preload="none" poster="assets/robot_real_2024_multi.jpg">
+          <source src="assets/video_2024_match.mp4" type="video/mp4">
+        </video>
+        <div class="v-info"><div class="v-title">比赛现场实机对战</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 实战 -->
+  <div class="card">
+    <div class="section-title"><span class="icon">&#128247;</span> 实战掠影</div>
+    <div class="grid3">
+      <div class="grid-item" onclick="openLb('assets/team_2026_sc_award.jpg')"><img src="assets/team_2026_sc_award.jpg" alt="颁奖" loading="lazy"><div class="lbl">2026 冠军+季军颁奖</div></div>
+      <div class="grid-item" onclick="openLb('assets/robot_real_2026_outdoor.jpg')"><img src="assets/robot_real_2026_outdoor.jpg" alt="战车" loading="lazy"><div class="lbl">冠军战车实物特写</div></div>
+      <div class="grid-item" onclick="openLb('assets/team_2024_gd_group.jpg')"><img src="assets/team_2024_gd_group.jpg" alt="个人" loading="lazy"><div class="lbl">个人与参赛机器人</div></div>
+      <div class="grid-item" onclick="openLb('assets/robot_real_2024_top1.jpg')"><img src="assets/robot_real_2024_top1.jpg" alt="结构" loading="lazy"><div class="lbl">机器人结构细节</div></div>
+      <div class="grid-item" onclick="openLb('assets/robot_real_2024_multi.jpg')"><img src="assets/robot_real_2024_multi.jpg" alt="编队" loading="lazy"><div class="lbl">多机型编队</div></div>
+      <div class="grid-item" onclick="openLb('assets/team_2025_fj_personal.jpg')"><img src="assets/team_2025_fj_personal.jpg" alt="战队" loading="lazy"><div class="lbl">IRONR战队合影</div></div>
+    </div>
+  </div>
+
+  <!-- 荣誉 -->
+  <div class="card">
+    <div class="section-title"><span class="icon">&#127942;</span> 竞赛荣誉</div>
+    <div class="cert-block">
+      <div class="cert-ttl"><span class="yr">2026</span> RoboMaster · 四川站</div>
+      <div class="grid3">
+        <div class="ci" onclick="openLb('assets/result_2026_sc_1v1_champion.jpg')"><div class="cw"><img src="assets/result_2026_sc_1v1_champion.jpg" alt="" loading="lazy"></div><div class="ci-info"><div class="ci-award gold">冠军</div><div class="ci-name">官方公示</div><div class="ci-tag">IRONR战队</div></div></div>
+        <div class="ci" onclick="openLb('assets/cert_2026_sc_champion_3rd.jpg')"><div class="cw"><img src="assets/cert_2026_sc_champion_3rd.jpg" alt="" loading="lazy"></div><div class="ci-info"><div class="ci-award gold">冠军 / 季军</div><div class="ci-name">获奖证书</div></div></div>
+        <div class="ci" onclick="openLb('assets/result_2026_sc_3v3_3rd.jpg')"><div class="cw"><img src="assets/result_2026_sc_3v3_3rd.jpg" alt="" loading="lazy"></div><div class="ci-info"><div class="ci-award">季军</div><div class="ci-name">官方公示</div><div class="ci-tag">IRONR战队</div></div></div>
+      </div>
+    </div>
+    <div class="cert-block">
+      <div class="cert-ttl"><span class="yr">2025</span> RoboMaster 高校联盟赛</div>
+      <div class="grid3">
+        <div class="ci" onclick="openLb('assets/cert_2025_1v1_1st.jpg')"><div class="cw"><img src="assets/cert_2025_1v1_1st.jpg" alt="" loading="lazy"></div><div class="ci-info"><div class="ci-award gold">一等奖</div><div class="ci-name">机器人竞技奖</div></div></div>
+        <div class="ci" onclick="openLb('assets/cert_2025_3v3_2nd.jpg')"><div class="cw"><img src="assets/cert_2025_3v3_2nd.jpg" alt="" loading="lazy"></div><div class="ci-info"><div class="ci-award">二等奖</div><div class="ci-name">步兵机器人组</div></div></div>
+        <div class="ci" onclick="openLb('assets/cert_2025_fj_3v3_2nd.jpg')"><div class="cw"><img src="assets/cert_2025_fj_3v3_2nd.jpg" alt="" loading="lazy"></div><div class="ci-info"><div class="ci-award">二等奖</div><div class="ci-name">福建站</div></div></div>
+        <div class="ci" onclick="openLb('assets/cert_2025_fj_1v1_3rd.jpg')"><div class="cw"><img src="assets/cert_2025_fj_1v1_3rd.jpg" alt="" loading="lazy"></div><div class="ci-info"><div class="ci-award">三等奖</div><div class="ci-name">福建站</div></div></div>
+      </div>
+    </div>
+    <div class="cert-block">
+      <div class="cert-ttl"><span class="yr">2024</span> RoboMaster · 广东站</div>
+      <div class="grid3">
+        <div class="ci" onclick="openLb('assets/cert_2024_gd_3v3_1st.jpg')"><div class="cw"><img src="assets/cert_2024_gd_3v3_1st.jpg" alt="" loading="lazy"></div><div class="ci-info"><div class="ci-award gold">一等奖</div><div class="ci-name">非甲级队伍</div></div></div>
+        <div class="ci" onclick="openLb('assets/cert_2024_gd_1v1_3rd.jpg')"><div class="cw"><img src="assets/cert_2024_gd_1v1_3rd.jpg" alt="" loading="lazy"></div><div class="ci-info"><div class="ci-award">三等奖</div><div class="ci-name">非甲级队伍</div></div></div>
+        <div class="ci" onclick="openLb('assets/cert_2024_gd_1v1_3rd_individual.jpg')"><div class="cw"><img src="assets/cert_2024_gd_1v1_3rd_individual.jpg" alt="" loading="lazy"></div><div class="ci-info"><div class="ci-award">三等奖</div><div class="ci-name">赵铂个人证书</div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 资质 -->
+  <div class="card">
+    <div class="section-title"><span class="icon">&#128196;</span> 职业资质</div>
+    <div class="cred">
+      <div class="cred-item" onclick="openLb('assets/cert_electrician.jpg')">
+        <img src="assets/cert_electrician.jpg" alt="低压电工证" loading="lazy">
+        <div class="cr-info">
+          <div class="cr-name">低压电工特种作业操作证</div>
+          <div class="cr-detail">签发：<span>广州市应急管理局</span> · 有效期至 2031.07.10</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ft"><div class="ft-note">赵铂 · RoboMaster 国家级冠军 · 机械设计工程师</div></div>
+</div>
+
+<script>
+function openLb(s){document.getElementById('lb-img').src=s;document.getElementById('lb').classList.add('on');document.body.style.overflow='hidden'}
+function closeLb(){document.getElementById('lb').classList.remove('on');document.body.style.overflow=''}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLb()})
+</script>
 </body>
 </html>
